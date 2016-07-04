@@ -11,7 +11,7 @@
 
         <activity
             android:name=".ui.activity.MainActivity"
-            android:label="@string/title_activity_main"
+
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,12 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--关于知书-->
         <activity
             android:name=".ui.activity.AboutAPPActivity"
             android:screenOrientation="portrait" />
         <!--更多选项-->
         <activity
             android:name=".ui.activity.MoreActivity"
+            android:screenOrientation="portrait"/>
+        <!--个人简介-->
+        <activity
+            android:name=".ui.activity.Othell0InfoActivity"
             android:screenOrientation="portrait"/>
     </application>
 

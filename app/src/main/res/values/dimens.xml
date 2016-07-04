@@ -9,5 +9,4 @@
     <dimen name="top_image_height">206dp</dimen>
     <!-- CircleIndicator -->
     <dimen name="circle_indicator_default_height">20dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
 </resources>

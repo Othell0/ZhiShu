@@ -22,6 +22,16 @@ public class AboutAPPActivity extends AbsBaseActivity {
     @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbarLayout;
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_about;
+    }
+
+    @Override
+    public void initViews(Bundle savedInstanceState) {
+
+    }
+
 
     @Override
     public void initToolBar() {
@@ -31,28 +41,17 @@ public class AboutAPPActivity extends AbsBaseActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
 
         mCollapsingToolbarLayout.setTitle("关于知书");
-        int version = AppUtils.getVerCode(this);
-        mVersionTv.setText("版本号:" + " V" + version);
+        mCollapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.card_view_background_dark));
 
-    }
+        String version = AppUtils.getVerName(this);
+        mVersionTv.setText("版本号:" + "V" + "" + version);
 
-
-
-    @Override
-    public void initViews(Bundle savedInstanceState) {
-
-    }
-
-    @Override
-    public int getLayoutId() {
-        return R.layout.activity_about;
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;
