@@ -33,6 +33,9 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         initToolBar();
         //初始化日夜间模式切换帮助类
         mNightModeHelper = new NightModeHelper(this);
+
+        //加载数据
+        initData();
     }
 
     @Override
@@ -46,7 +49,10 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 
     public abstract int getLayoutId();
 
+
     public abstract void initViews(Bundle savedInstanceState);
 
     public abstract void initToolBar();
+
+    public abstract void initData();
 }

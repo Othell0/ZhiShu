@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tuling" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="小知"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/item_trc_robot_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        tools:text="问我吧(*^__^*)"
+        android:background="@drawable/chat_robot_bg_normal"/>
+
+</LinearLayout>

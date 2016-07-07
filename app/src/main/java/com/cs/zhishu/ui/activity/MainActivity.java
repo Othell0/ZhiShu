@@ -40,6 +40,11 @@ public class MainActivity extends AbsBaseActivity {
         setSupportActionBar(mToolbar);
     }
 
+    @Override
+    public void initData() {
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

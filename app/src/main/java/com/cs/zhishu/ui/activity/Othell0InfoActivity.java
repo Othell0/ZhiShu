@@ -46,5 +46,10 @@ public class Othell0InfoActivity extends AbsBaseActivity {
 
     }
 
+    @Override
+    public void initData() {
+
+    }
+
 
 }

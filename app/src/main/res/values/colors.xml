@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--#FF03A9F4   #FF0288D1-->
-    <color name="colorPrimary">#F15D5B</color>
-    <color name="colorPrimaryDark">#D04C48</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#0059FF</color>
+    <color name="colorPrimaryDark">#0059FF</color>
+    <color name="colorAccent">#006DFF</color>
     <color name="status_bar_color">@color/colorPrimaryDark</color>
     <color name="card_view_background_dark">#FFFFFF</color>
     <color name="color_read">#9E9E9E</color>
@@ -25,5 +25,9 @@
     <color name="line_bg">#e6e6e6</color>
     <color name="nav_text_color_mormal">#D3D3D3</color>
     <color name="tab_unselect_color">#AAFFFFFF</color>
+    <color name="colorfff">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="color333">#333333</color>
+    <color name="colord630d984">#d630d984</color>
 
 </resources>

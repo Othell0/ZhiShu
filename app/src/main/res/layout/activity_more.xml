@@ -152,6 +152,40 @@
                         android:textSize="16sp" />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/more_btn_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="60dp"
+                        android:background="@color/line_bg" />
+
+                    <ImageView
+                        android:id="@+id/image_5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/icon"
+                        android:tint="@color/color_read" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/image_5"
+                        android:paddingTop="10dp"
+                        android:text="知你所问"
+                        android:textColor="@color/gary_30"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
 
             </LinearLayout>
 
@@ -172,7 +206,7 @@
                 android:background="?android:attr/selectableItemBackground">
 
                 <ImageView
-                    android:id="@+id/image_5"
+                    android:id="@+id/image_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -186,7 +220,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@+id/image_5"
+                    android:layout_toRightOf="@+id/image_6"
                     android:text="关于知书"
                     android:textColor="@color/gary_30"
                     android:textSize="16sp" />

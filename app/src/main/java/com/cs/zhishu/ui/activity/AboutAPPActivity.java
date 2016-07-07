@@ -48,6 +48,11 @@ public class AboutAPPActivity extends AbsBaseActivity {
 
     }
 
+    @Override
+    public void initData() {
+
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -44,6 +44,12 @@ public class MoreActivity extends AbsBaseActivity {
     }
 
     @Override
+    public void initData() {
+
+    }
+
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == android.R.id.home) {
@@ -77,4 +83,11 @@ public class MoreActivity extends AbsBaseActivity {
     }
 
 
+
+    @OnClick(R.id.more_btn_answer)
+    void startTuling() {
+        startActivity(new Intent(MoreActivity.this, TRClientActivity.class));
+
+
+    }
 }
