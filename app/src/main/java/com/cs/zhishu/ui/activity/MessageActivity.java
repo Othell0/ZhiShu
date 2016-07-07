@@ -1,7 +1,6 @@
 package com.cs.zhishu.ui.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
@@ -17,14 +16,10 @@ import android.widget.TextView;
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
 import com.cs.zhishu.base.Bmob;
-import com.cs.zhishu.model.ZhiShuMessage;
+import com.cs.zhishu.model.zhishuMessage;
 import com.facebook.stetho.common.LogUtil;
 
-import java.util.Observable;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
 /**
@@ -112,7 +107,7 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
     }
 
     private void sendFeedBackText(String text) {
-        ZhiShuMessage mMessage = new ZhiShuMessage();
+        zhishuMessage mMessage = new zhishuMessage();
         mMessage.setContent(text);
         mMessage.save(this, new SaveListener() {
             @Override

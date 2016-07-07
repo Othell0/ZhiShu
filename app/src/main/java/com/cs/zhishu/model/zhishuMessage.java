@@ -5,17 +5,17 @@ import cn.bmob.v3.BmobObject;
 /**
  * Created by Othell0 on 2016/7/6.
  */
-public class ZhiShuMessage extends BmobObject{
+public class zhishuMessage extends BmobObject{
     private String content;
 
-    public ZhiShuMessage(String content)
+    public zhishuMessage(String content)
     {
 
         super();
         this.content = content;
     }
 
-    public ZhiShuMessage() {
+    public zhishuMessage() {
         super();
     }
 
