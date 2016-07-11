@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="66dp"
-            android:text="世之俗多伪  人之情多矫"
+            android:text="人之情多矫，世之俗多伪，岂可信乎？"
             android:textSize="18dp" />
 
         <TextView

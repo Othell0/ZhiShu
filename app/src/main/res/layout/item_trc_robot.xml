@@ -30,7 +30,7 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="0dp"
         android:gravity="center_vertical"
-        android:textSize="17sp"
+        android:textSize="16sp"
         tools:text="问我吧(*^__^*)"
         android:background="@drawable/chat_robot_bg_normal"/>
 

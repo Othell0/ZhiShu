@@ -5,6 +5,7 @@ import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -88,6 +89,13 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
         service = TRService.createTRService();
         trClientAdapter.addData(new ChatBean(TRClientAdapter.TYPE_ROBOT, TRC_ROBOT_REC));
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
