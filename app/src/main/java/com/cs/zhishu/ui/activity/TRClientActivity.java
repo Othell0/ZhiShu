@@ -69,6 +69,7 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
 
         trClientAdapter = new TRClientAdapter(this);
         trcList.setAdapter(trClientAdapter);
+        initData();
 
     }
 
@@ -83,7 +84,7 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
     }
 
 
-    @Override
+
     public void initData() {
 
         service = TRService.createTRService();

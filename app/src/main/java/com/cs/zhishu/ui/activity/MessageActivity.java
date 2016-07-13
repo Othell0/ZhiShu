@@ -45,7 +45,9 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
     public void initViews(Bundle savedInstanceState) {
     /*初始化Bmob*/
         cn.bmob.v3.Bmob.initialize(this, Bmob.BMBO_KEY);
+
         mSubmit.setOnClickListener(this);
+
         mFeedBack.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int before, int count) {
@@ -77,10 +79,7 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
 
 
 
-    @Override
-    public void initData() {
 
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

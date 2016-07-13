@@ -43,10 +43,7 @@ public class MoreActivity extends AbsBaseActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    public void initData() {
 
-    }
 
 
     @Override

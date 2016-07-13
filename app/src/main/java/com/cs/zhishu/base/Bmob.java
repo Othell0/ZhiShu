@@ -16,7 +16,7 @@ public class Bmob extends Application {
         mAppContext = this;
     }
 
-    public static Context getmAppContext() {
+    public static Context getContext() {
         return mAppContext;
     }
 }

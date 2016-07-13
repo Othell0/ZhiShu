@@ -40,10 +40,6 @@ public class MainActivity extends AbsBaseActivity {
         setSupportActionBar(mToolbar);
     }
 
-    @Override
-    public void initData() {
-
-    }
 
 
     @Override

@@ -48,10 +48,6 @@ public class AboutAPPActivity extends AbsBaseActivity {
 
     }
 
-    @Override
-    public void initData() {
-
-    }
 
 
     @Override
