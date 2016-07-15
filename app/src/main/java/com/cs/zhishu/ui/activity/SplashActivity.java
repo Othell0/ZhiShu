@@ -98,6 +98,7 @@ public class SplashActivity extends Activity {
                                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                                     .error(R.drawable.default_splash)
                                     .into(ivLaunch);
+
                             tvForm.setText(luanchImageBean.getText());
 
                             mHandler.sendEmptyMessageDelayed(0, 1000);

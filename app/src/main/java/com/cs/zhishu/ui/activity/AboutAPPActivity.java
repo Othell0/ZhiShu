@@ -15,12 +15,14 @@ import butterknife.BindView;
 
 public class AboutAPPActivity extends AbsBaseActivity {
 
+
     @BindView(R.id.tv_version)
     TextView mVersionTv;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbarLayout;
+
 
     @Override
     public int getLayoutId() {
@@ -29,6 +31,7 @@ public class AboutAPPActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+
 
     }
 
@@ -41,13 +44,12 @@ public class AboutAPPActivity extends AbsBaseActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
 
         mCollapsingToolbarLayout.setTitle("关于知书");
-        mCollapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.card_view_background_dark));
+
 
         String version = AppUtils.getVerName(this);
         mVersionTv.setText("版本号:" + "V" + "" + version);
 
     }
-
 
 
     @Override
@@ -59,4 +61,6 @@ public class AboutAPPActivity extends AbsBaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
