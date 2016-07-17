@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
-import com.cs.zhishu.base.ZhiShuAPP;
+import com.cs.zhishu.base.ZhiShu;
 import com.cs.zhishu.model.zhishuMessage;
 import com.facebook.stetho.common.LogUtil;
 
@@ -44,7 +44,7 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
     @Override
     public void initViews(Bundle savedInstanceState) {
     /*初始化Bmob*/
-        cn.bmob.v3.Bmob.initialize(this, ZhiShuAPP.BMBO_KEY);
+        cn.bmob.v3.Bmob.initialize(this, ZhiShu.BMBO_KEY);
 
         mSubmit.setOnClickListener(this);
 

@@ -19,23 +19,22 @@ import com.cs.zhishu.R;
 import com.cs.zhishu.model.LuanchImageBean;
 import com.cs.zhishu.network.RetrofitHelper;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class SplashActivity extends Activity {
 
+
     private static final String RESOLUTION = "1080*1776";
 
     private static final int ANIMATION_DURATION = 2000;
 
     private static final float SCALE_END = 1.13F;
-    @BindView(R.id.iv_launch)
-    ImageView ivLaunch;
-    @BindView(R.id.tv_form)
-    TextView tvForm;
+
+    private ImageView ivSpalsh;
+
+    private TextView tvFrom;
 
 
     private Handler mHandler = new Handler() {
@@ -51,12 +50,10 @@ public class SplashActivity extends Activity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ButterKnife.bind(this);
+
 
 
     }
@@ -69,6 +66,9 @@ public class SplashActivity extends Activity {
     }
 
     private void getLuanchImage() {
+        ivSpalsh = (ImageView) findViewById(R.id.iv_spalsh);
+        tvFrom = (TextView) findViewById(R.id.tv_from);
+
         RetrofitHelper.builder().getLuanchImage(RESOLUTION)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -78,13 +78,13 @@ public class SplashActivity extends Activity {
                     @Override
                     public void onCompleted() {
                         Log.e("666", "onCompleted");
-                        animateImage();
 
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        Glide.with(SplashActivity.this).load(R.drawable.default_splash).into(ivLaunch);
+                        Log.e("请求失败", "onError");
+                        Glide.with(SplashActivity.this).load(R.drawable.default_splash).into(ivSpalsh);
                         mHandler.sendEmptyMessageDelayed(0, 1000);
 
                     }
@@ -96,13 +96,11 @@ public class SplashActivity extends Activity {
                             Glide.with(SplashActivity.this)
                                     .load(img)
                                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                                    .error(R.drawable.default_splash)
-                                    .into(ivLaunch);
-
-                            tvForm.setText(luanchImageBean.getText());
-
+                                    .into(ivSpalsh);
+                            tvFrom.setText(luanchImageBean.getText());
                             mHandler.sendEmptyMessageDelayed(0, 1000);
                         }
+
 
                     }
                 });
@@ -110,8 +108,8 @@ public class SplashActivity extends Activity {
 
 
     private void animateImage() {
-        ObjectAnimator animatorX = ObjectAnimator.ofFloat(ivLaunch, "scaleX", 1f, SCALE_END);
-        ObjectAnimator animatorY = ObjectAnimator.ofFloat(ivLaunch, "scaleY", 1f, SCALE_END);
+        ObjectAnimator animatorX = ObjectAnimator.ofFloat(ivSpalsh, "scaleX", 1f, SCALE_END);
+        ObjectAnimator animatorY = ObjectAnimator.ofFloat(ivSpalsh, "scaleY", 1f, SCALE_END);
 
         AnimatorSet set = new AnimatorSet();
         set.setDuration(ANIMATION_DURATION).play(animatorX).with(animatorY);

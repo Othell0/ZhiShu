@@ -3,7 +3,7 @@ package com.cs.zhishu.db;
 import android.content.Context;
 
 
-import com.cs.zhishu.base.ZhiShuAPP;
+import com.cs.zhishu.base.ZhiShu;
 import com.cs.zhishu.model.DoubanMeizi;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -34,7 +34,7 @@ public class MeiziCache {
 
     private static MeiziCache mMeiziCache;
 
-    private File mFile = new File(ZhiShuAPP.getContext().getFilesDir(), DATA_FILE_NAME);
+    private File mFile = new File(ZhiShu.getContext().getFilesDir(), DATA_FILE_NAME);
 
     private Gson mGson = new Gson();
 

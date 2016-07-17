@@ -6,7 +6,7 @@ import android.content.Context;
 /**
  * Created by Othell0 on 2016/7/6.
  */
-public class ZhiShuAPP extends Application {
+public class ZhiShu extends Application {
     public static Context mAppContext;
 
     public static String BMBO_KEY = "e7b343bf907638991c9712c7ed0c595f";

@@ -4,18 +4,25 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.cs.zhishu.base.ZhiShuAPP;
+import com.cs.zhishu.base.ZhiShu;
 
 /**
  * Created by exbbefl on 7/15/2016.
  */
-public class NetWorkUtil {
+public class NetWorkUtil
+{
+
+    private NetWorkUtil()
+    {
+
+    }
+
     public static boolean isNetworkConnected()
     {
 
-        if (ZhiShuAPP.getContext() != null)
+        if (ZhiShu.getContext() != null)
         {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShuAPP.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShu.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
             if (mNetworkInfo != null)
             {
@@ -28,9 +35,9 @@ public class NetWorkUtil {
     public static boolean isWifiConnected()
     {
 
-        if (ZhiShuAPP.getContext() != null)
+        if (ZhiShu.getContext() != null)
         {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShuAPP.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShu.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo mWiFiNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
             if (mWiFiNetworkInfo != null)
             {
@@ -38,5 +45,37 @@ public class NetWorkUtil {
             }
         }
         return false;
+    }
+
+    public static boolean isMobileConnected()
+    {
+
+        if (ZhiShu.getContext() != null)
+        {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShu.getContext()
+                    .getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mMobileNetworkInfo = mConnectivityManager
+                    .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+            if (mMobileNetworkInfo != null)
+            {
+                return mMobileNetworkInfo.isAvailable();
+            }
+        }
+        return false;
+    }
+
+    public static int getConnectedType()
+    {
+
+        if (ZhiShu.getContext() != null)
+        {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) ZhiShu.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            if (mNetworkInfo != null && mNetworkInfo.isAvailable())
+            {
+                return mNetworkInfo.getType();
+            }
+        }
+        return -1;
     }
 }

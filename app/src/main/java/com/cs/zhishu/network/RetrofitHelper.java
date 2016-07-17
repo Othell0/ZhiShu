@@ -1,6 +1,6 @@
 package com.cs.zhishu.network;
 
-import com.cs.zhishu.base.ZhiShuAPP;
+import com.cs.zhishu.base.ZhiShu;
 import com.cs.zhishu.model.DailyComment;
 import com.cs.zhishu.model.DailyDetail;
 import com.cs.zhishu.model.DailyExtraMessage;
@@ -54,11 +54,10 @@ public class RetrofitHelper {
 
     private RetrofitHelper() {
 
-        initOkHttpClient();
+/*        initOkHttpClient();*/
 
         Retrofit mRetrofit = new Retrofit.Builder()
                 .baseUrl(ZHIHU_DAILY_URL)
-                .client(mOkHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
@@ -115,12 +114,12 @@ public class RetrofitHelper {
 
                     //设置Http缓存
 
-                    File cacheFile = new File(ZhiShuAPP.getContext().getCacheDir(), "HttpCache");
-                    Cache cache = new Cache(cacheFile, 1024 * 1024 * 100); //100Mb
+                    Cache mCache = new Cache(new File(ZhiShu.getContext().getCacheDir(), "HttpCache"), 1024 * 1024 * 100);
+
 
 
                     mOkHttpClient = new OkHttpClient.Builder()
-                            .cache(cache)
+                            .cache(mCache)
                             .addInterceptor(mRewriteCacheControlInterceptor)
                             .addNetworkInterceptor(mRewriteCacheControlInterceptor)
                             .addInterceptor(interceptor)
@@ -132,27 +131,29 @@ public class RetrofitHelper {
         }
     }
 
-    private Interceptor mRewriteCacheControlInterceptor = new Interceptor()
-    {
+    private final Interceptor mRewriteCacheControlInterceptor = new Interceptor() {
 
         @Override
-        public Response intercept(Chain chain) throws IOException
-        {
+        public Response intercept(Chain chain) throws IOException {
 
             Request request = chain.request();
-            if (!NetWorkUtil.isNetworkConnected())
-            {
-                request = request.newBuilder().cacheControl(CacheControl.FORCE_CACHE).build();
+            if (!NetWorkUtil.isNetworkConnected()) {
+                request = request.newBuilder()
+                        .cacheControl(CacheControl.FORCE_CACHE)
+                        .build();
             }
             Response originalResponse = chain.proceed(request);
-            if (NetWorkUtil.isNetworkConnected())
-            {
+            if (NetWorkUtil.isNetworkConnected()) {
                 String cacheControl = request.cacheControl().toString();
-                return originalResponse.newBuilder().header("Cache-Control", cacheControl).removeHeader("Pragma").build();
-            } else
-            {
-                return originalResponse.newBuilder().header("Cache-Control", "public, only-if-cached, max-stale=" + CACHE_TIME_LONG)
-                        .removeHeader("Pragma").build();
+                return originalResponse.newBuilder()
+                        .header("Cache-Control", cacheControl)
+                        .removeHeader("Pragma")
+                        .build();
+            } else {
+                return originalResponse.newBuilder()
+                        .header("Cache-Control", "public, only-if-cached, max-stale=" + CACHE_TIME_LONG)
+                        .removeHeader("Pragma")
+                        .build();
             }
         }
     };
