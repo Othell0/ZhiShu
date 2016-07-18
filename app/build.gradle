@@ -34,11 +34,13 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
 
+    /*BottomBar*/
+    compile 'com.roughike:bottom-bar:1.4.0'
+
     /*工具库*/
     compile 'com.github.lazylibrary:lazylibrary:1.0.2'
     compile 'com.code19.library:library:0.0.7'
-    /*bottomnavigation*/
-    compile 'com.aurelhubert:ahbottomnavigation:1.2.3'
+
     /*毛玻璃效果*/
     compile 'jp.wasabeef:glide-transformations:2.0.1'
 
