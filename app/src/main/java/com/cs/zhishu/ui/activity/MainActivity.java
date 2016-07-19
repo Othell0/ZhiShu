@@ -3,6 +3,7 @@ package com.cs.zhishu.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.ContextCompat;
@@ -10,7 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 /*知书主界面*/
@@ -35,13 +34,17 @@ public class MainActivity extends AbsBaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-
     @BindView(R.id.viewPager)
     ViewPager viewPager;
+    @BindView(R.id.drawer_layout)
+    CoordinatorLayout drawerLayout;
+
 
     private BottomBar mBottomBar;
 
     private List<Fragment> fragments = new ArrayList<>();
+/*    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;*/
 
 
     @Override
@@ -52,26 +55,35 @@ public class MainActivity extends AbsBaseActivity {
     @Override
     public void initViews(Bundle savedInstanceState) {
 
-        fragments.add(DailyListFragment.newInstance());
-        fragments.add(ThemesDailyFragment.newInstance());
-        fragments.add(SectionsFragment.newInstance());
-        fragments.add(HotNewsFragment.newInstance());
-        mBottomBar = BottomBar.attach(this, savedInstanceState);
 
-
-        initBottomBar();
-     /*   initViewPager();*/
+        initBottomBar(savedInstanceState);
+        initViewPager();
+       /* fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();*/
 
     }
 
-    private void initBottomBar() {
+/*    @Override
+    protected void onResume() {
+        super.onResume();
+        fragmentTransaction.replace(R.id.content, DailyListFragment.newInstance());
+        fragmentTransaction.commit();
+    }*/
+
+
+    private void initBottomBar(Bundle savedInstanceState) {
+        mBottomBar = BottomBar.attachShy(drawerLayout, viewPager, savedInstanceState);
 
         mBottomBar.setItems(R.menu.bottombar_menu);
+
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
 
 
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
+
+            /*    Fragment fragment = null;*/
+
                 switch (menuItemId) {
                     case R.id.bb_menu_daily:
                         viewPager.setCurrentItem(0);
@@ -87,6 +99,8 @@ public class MainActivity extends AbsBaseActivity {
                         break;
 
                 }
+         /*       fragmentTransaction.replace(R.id.content, fragment);
+            fragmentTransaction.commit();*/
             }
 
             @Override
@@ -103,7 +117,12 @@ public class MainActivity extends AbsBaseActivity {
     }
 
 
-    /*private void initViewPager() {
+    private void initViewPager() {
+        fragments.add(DailyListFragment.newInstance());
+        fragments.add(ThemesDailyFragment.newInstance());
+        fragments.add(SectionsFragment.newInstance());
+        fragments.add(HotNewsFragment.newInstance());
+
         viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
@@ -133,7 +152,6 @@ public class MainActivity extends AbsBaseActivity {
         });
 
     }
-*/
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -184,12 +202,7 @@ public class MainActivity extends AbsBaseActivity {
         return super.onPrepareOptionsMenu(menu);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }
 
 
