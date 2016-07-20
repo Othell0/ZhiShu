@@ -86,8 +86,10 @@ public class HotNewsFragment extends LazyFragment {
 
     private void afterGetHotNews() {
         mRecyclerView.setHasFixedSize(true);
+
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         HotNewsAdapter mAdapter = new HotNewsAdapter(mRecyclerView, hotNewsInfos);
+
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new AbsRecyclerViewAdapter.OnItemClickListener()
         {
