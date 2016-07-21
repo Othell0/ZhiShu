@@ -4,12 +4,15 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.cs.zhishu.R;
 import com.cs.zhishu.adapter.HotNewsAdapter;
 import com.cs.zhishu.base.LazyFragment;
 import com.cs.zhishu.model.HotNews;
 import com.cs.zhishu.network.RetrofitHelper;
+import com.cs.zhishu.ui.activity.DailyDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,8 @@ public class HotNewsFragment extends LazyFragment {
     RecyclerView mRecyclerView;
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout mSwipeRefreshLayout;
+
+    private HotNewsAdapter mAdapter;
     private List<HotNews.HotNewsInfo> hotNewsInfos = new ArrayList<>();
 
     public static HotNewsFragment newInstance() {
@@ -61,7 +66,7 @@ public class HotNewsFragment extends LazyFragment {
                 .subscribe(new Observer<HotNews>() {
                     @Override
                     public void onCompleted() {
-                        Log.e("666", "onCompleted");
+                        Log.e("HotNewsFragment", "onCompleted");
 
                     }
 
@@ -88,21 +93,23 @@ public class HotNewsFragment extends LazyFragment {
         mRecyclerView.setHasFixedSize(true);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        HotNewsAdapter mAdapter = new HotNewsAdapter(mRecyclerView, hotNewsInfos);
+        mAdapter = new HotNewsAdapter(hotNewsInfos);
+        mAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
 
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(new AbsRecyclerViewAdapter.OnItemClickListener()
-        {
 
+        mAdapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemClick(int position, AbsRecyclerViewAdapter.ClickableViewHolder holder)
-            {
-
+            public void onItemClick(View view, int position) {
                 HotNews.HotNewsInfo hotNewsInfo = hotNewsInfos.get(position);
                 DailyDetailActivity.lanuch(getActivity(), hotNewsInfo.newsId);
+
+
             }
+
+
         });
     }
 
-    }
 }
+

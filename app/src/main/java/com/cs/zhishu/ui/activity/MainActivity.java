@@ -1,25 +1,21 @@
 package com.cs.zhishu.ui.activity;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
 import com.cs.zhishu.ui.fragment.DailyListFragment;
 import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
-import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnMenuTabClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,17 +30,10 @@ public class MainActivity extends AbsBaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @BindView(R.id.viewPager)
-    ViewPager viewPager;
-    @BindView(R.id.drawer_layout)
-    CoordinatorLayout drawerLayout;
-
-
-    private BottomBar mBottomBar;
-
+    @BindView(R.id.bottom_navigation)
+    AHBottomNavigation mAhBottomNavigation;
     private List<Fragment> fragments = new ArrayList<>();
-/*    private FragmentManager fragmentManager;
-    private FragmentTransaction fragmentTransaction;*/
+    private int currentTabIndex;
 
 
     @Override
@@ -56,110 +45,59 @@ public class MainActivity extends AbsBaseActivity {
     public void initViews(Bundle savedInstanceState) {
 
 
-        initBottomBar(savedInstanceState);
-        initViewPager();
-       /* fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();*/
-
-    }
-
-/*    @Override
-    protected void onResume() {
-        super.onResume();
-        fragmentTransaction.replace(R.id.content, DailyListFragment.newInstance());
-        fragmentTransaction.commit();
-    }*/
-
-
-    private void initBottomBar(Bundle savedInstanceState) {
-        mBottomBar = BottomBar.attachShy(drawerLayout, viewPager, savedInstanceState);
-
-        mBottomBar.setItems(R.menu.bottombar_menu);
-
-        mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
-
-
-            @Override
-            public void onMenuTabSelected(@IdRes int menuItemId) {
-
-            /*    Fragment fragment = null;*/
-
-                switch (menuItemId) {
-                    case R.id.bb_menu_daily:
-                        viewPager.setCurrentItem(0);
-                        break;
-                    case R.id.bb_menu_theme:
-                        viewPager.setCurrentItem(1);
-                        break;
-                    case R.id.bb_menu_expert:
-                        viewPager.setCurrentItem(2);
-                        break;
-                    case R.id.bb_menu_article:
-                        viewPager.setCurrentItem(3);
-                        break;
-
-                }
-         /*       fragmentTransaction.replace(R.id.content, fragment);
-            fragmentTransaction.commit();*/
-            }
-
-            @Override
-            public void onMenuTabReSelected(@IdRes int menuItemId) {
-
-            }
-        });
-        // Setting colors for different tabs when there's more than three of them.
-        // You can set colors for tabs in three different ways as shown below.
-        mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
-        mBottomBar.mapColorForTab(1, 0xFF5D4037);
-        mBottomBar.mapColorForTab(2, "#7B1FA2");
-        mBottomBar.mapColorForTab(3, ContextCompat.getColor(this, R.color.colord630d984));
-    }
-
-
-    private void initViewPager() {
         fragments.add(DailyListFragment.newInstance());
         fragments.add(ThemesDailyFragment.newInstance());
         fragments.add(SectionsFragment.newInstance());
         fragments.add(HotNewsFragment.newInstance());
 
-        viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return fragments.get(position);
-            }
-
-            @Override
-            public int getCount() {
-                return fragments.size();
-            }
-        });
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                mBottomBar.selectTabAtPosition(position, true);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-
+        showFragment(fragments.get(0));
+        initBottomNav();
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+    private void showFragment(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
+    }
 
-        // Necessary to restore the BottomBar's state, otherwise we would
-        // lose the current tab on orientation change.
-        mBottomBar.onSaveInstanceState(outState);
+    private void initBottomNav() {
+        AHBottomNavigationItem item1 = new AHBottomNavigationItem("日报", R.drawable.ic_profile_answer, R.color.colorPrimary);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem("主题", R.drawable.ic_profile_article, R.color.themesdaily_fragment);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem("专栏", R.drawable.ic_profile_column, R.color.section_fragment);
+        AHBottomNavigationItem item4 = new AHBottomNavigationItem("文章", R.drawable.ic_profile_favorite, R.color.hotnews_fragment);
+
+        mAhBottomNavigation.addItem(item1);
+        mAhBottomNavigation.addItem(item2);
+        mAhBottomNavigation.addItem(item3);
+        mAhBottomNavigation.addItem(item4);
+
+        mAhBottomNavigation.setBehaviorTranslationEnabled(true);
+        mAhBottomNavigation.setAccentColor(getResources().getColor(R.color.colorPrimary));
+        mAhBottomNavigation.setInactiveColor(getResources().getColor(R.color.nav_text_color_mormal));
+        mAhBottomNavigation.setCurrentItem(0);
+
+        mAhBottomNavigation.setBehaviorTranslationEnabled(true);
+        mAhBottomNavigation.setDefaultBackgroundColor(getResources().getColor(R.color.bg_color));
+
+
+        mAhBottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener()
+        {
+
+            @Override
+            public void onTabSelected(int position, boolean wasSelected)
+            {
+
+                if (currentTabIndex != position)
+                {
+                    FragmentTransaction trx = getFragmentManager().beginTransaction();
+                    trx.hide(fragments.get(currentTabIndex));
+                    if (!fragments.get(position).isAdded())
+                    {
+                        trx.add(R.id.content, fragments.get(position));
+                    }
+                    trx.show(fragments.get(position)).commit();
+                }
+                currentTabIndex = position;
+            }
+        });
     }
 
 
@@ -201,6 +139,7 @@ public class MainActivity extends AbsBaseActivity {
 
         return super.onPrepareOptionsMenu(menu);
     }
+
 
 
 }

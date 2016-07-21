@@ -29,5 +29,8 @@
     <color name="transparent">#00000000</color>
     <color name="color333">#333333</color>
     <color name="colord630d984">#d630d984</color>
+    <color name="themesdaily_fragment">#05FF17</color>
+    <color name="section_fragment">#3840FF</color>
+    <color name="hotnews_fragment">#3A4CFF</color>
 
 </resources>

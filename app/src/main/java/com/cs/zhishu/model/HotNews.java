@@ -13,8 +13,7 @@ import java.util.List;
 public class HotNews {
     public List<HotNewsInfo> recent;
 
-    public class HotNewsInfo
-    {
+    public class HotNewsInfo {
 
         @SerializedName("news_id")
         public int newsId;
