@@ -8,7 +8,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.cs.zhishu.R;
 import com.cs.zhishu.model.HotNews;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class HotNewsAdapter extends BaseQuickAdapter<HotNews.HotNewsInfo> {
 
-    private List<HotNews.HotNewsInfo> hotNewsInfos = new ArrayList<>();
+
 
     public HotNewsAdapter(List<HotNews.HotNewsInfo> hotNewsInfos) {
         super(R.layout.item_hot_news, hotNewsInfos);

@@ -3,6 +3,8 @@ package com.cs.zhishu.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.chad.library.adapter.base.entity.MultiItemEntity;
+
 import java.util.List;
 
 /**
@@ -25,7 +27,7 @@ import java.util.List;
  * id : 新闻的 id
  * css : 供手机端的 WebView(UIWebView) 使用
  */
-public class DailyBean implements Parcelable {
+public class DailyBean extends MultiItemEntity implements Parcelable {
     private int type;
 
     private int id;
