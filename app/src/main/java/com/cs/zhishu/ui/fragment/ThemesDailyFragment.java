@@ -1,13 +1,9 @@
 package com.cs.zhishu.ui.fragment;
 
-import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.cs.zhishu.R;
@@ -21,7 +17,6 @@ import com.github.rahatarmanahmed.cpv.CircularProgressView;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -58,6 +53,7 @@ public class ThemesDailyFragment extends LazyFragment {
 
     private void showProgress() {
         mCircleProgressView.setVisibility(View.VISIBLE);
+        mCircleProgressView.startAnimation();
 
 
     }
@@ -110,6 +106,7 @@ public class ThemesDailyFragment extends LazyFragment {
 
     private void hideProgress() {
         mCircleProgressView.setVisibility(View.GONE);
+        mCircleProgressView.stopAnimation();
         mRecyclerView.setVisibility(View.VISIBLE);
 
 

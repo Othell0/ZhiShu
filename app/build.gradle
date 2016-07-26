@@ -66,6 +66,8 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     /*圆形progressview*/
     compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    /*圆点指示器*/
+    compile 'me.relex:circleindicator:1.2.1@aar'
 
     /*RxJava*/
     compile 'io.reactivex:rxandroid:1.1.0'

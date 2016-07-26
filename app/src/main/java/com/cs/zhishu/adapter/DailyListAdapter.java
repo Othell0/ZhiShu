@@ -138,7 +138,8 @@ public class DailyListAdapter extends BaseMultiItemQuickAdapter<DailyBean> {
     }
 
 
-    public void addData(List<DailyBean> dailys)
+
+    public void addDatas(List<DailyBean> dailys)
     {
 
         if (this.dailys == null)
@@ -150,6 +151,13 @@ public class DailyListAdapter extends BaseMultiItemQuickAdapter<DailyBean> {
             notifyDataSetChanged();
         }
     }
+
+
+
+
+
+
+
 
 
 }
