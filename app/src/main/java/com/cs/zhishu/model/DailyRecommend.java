@@ -29,7 +29,7 @@ public class DailyRecommend {
 
         public String avatar;
 
-        public String bio;
+        public String wb;
 
         public int id;
 
@@ -43,7 +43,7 @@ public class DailyRecommend {
 
             return "Editor{" +
                     "avatar='" + avatar + '\'' +
-                    ", bio='" + bio + '\'' +
+                    ", bio='" + wb + '\'' +
                     ", id=" + id +
                     ", name='" + name + '\'' +
                     ", title='" + title + '\'' +
