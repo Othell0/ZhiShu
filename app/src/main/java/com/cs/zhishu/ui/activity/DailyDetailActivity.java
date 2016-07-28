@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
+import com.cs.zhishu.base.BaseSwipeBackActivity;
 import com.cs.zhishu.model.DailyBean;
 import com.cs.zhishu.model.DailyDetail;
 import com.cs.zhishu.model.DailyExtraMessage;
@@ -90,8 +91,8 @@ public class DailyDetailActivity extends AbsBaseActivity {
             mDaily = intent.getParcelableExtra(EXTRA_DETAIL);
             id = intent.getIntExtra(EXTRA_ID, -1);
         }
-    /*   设置侧滑返回触发范围*/
-   /*     mSwipeBackLayout.setEdgeSize(120);*/
+  /* *//*   设置侧滑返回触发范围*//*
+        mSwipeBackLayout.setEdgeSize(120);*/
 
         /*初始化ToolBar*/
         setSupportActionBar(mToolbar);
@@ -114,7 +115,7 @@ public class DailyDetailActivity extends AbsBaseActivity {
         startGetDailyDetail(mDaily == null ? id : mDaily.getId());
 
         //第一次进入提示用户可以左滑返回
-        showSnackBarHint();
+ /*       showSnackBarHint();*/
 
 
     }

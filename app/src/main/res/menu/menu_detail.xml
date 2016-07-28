@@ -7,41 +7,41 @@
         android:title=""
         android:orderInCategory="1"
         android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_action_fav"
         android:title=""
         android:orderInCategory="2"
         android:icon="@drawable/abc_btn_rating_star_on_mtrl_alpha"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_action_comment"
         android:title=""
         android:orderInCategory="3"
         android:icon="@drawable/comment"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_action_comment_num"
         android:title=""
         android:orderInCategory="4"
         android:visible="false"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_action_parise"
         android:title=""
         android:orderInCategory="5"
         android:icon="@drawable/praise"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_action_parise_num"
         android:title=""
         android:visible="false"
         android:orderInCategory="6"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 
 </menu>
