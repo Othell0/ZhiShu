@@ -47,11 +47,31 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:screenOrientation="portrait" />
+        <!--主题日报详情界面-->
+        <activity
+            android:name=".ui.activity.ThemesDailyDetailsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--日报评论界面-->
+        <activity
+            android:name=".ui.activity.DailyCommentActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--专栏详情界面-->
+      <!--  <activity
+            android:name=".ui.activity.SectionsDetailsActivity"
+            android:screenOrientation="portrait"/>-->
+        <!--日报内容详情界面-->
+        <activity
+            android:name=".ui.activity.DailyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentStatusBar"/>
+
+        <!--日报推荐者查看界面-->
+        <activity
+            android:name=".ui.activity.DailyRecommendEditorsActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

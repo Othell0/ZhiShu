@@ -3,13 +3,11 @@ package com.cs.zhishu.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.chad.library.adapter.base.entity.MultiItemEntity;
-
 import java.util.List;
 
 /**
  * Created by exbbefl on 7/15/2016.
- *  * body : HTML 格式的新闻
+ * * body : HTML 格式的新闻
  * image-source : 图片的内容提供方。为了避免被起诉非法使用图片，在显示图片时最好附上其版权信息。
  * title : 新闻标题
  * image : 获得的图片同 最新消息 获得的图片分辨率不同。这里获得的是在文章浏览界面中使用的大图。
@@ -27,7 +25,7 @@ import java.util.List;
  * id : 新闻的 id
  * css : 供手机端的 WebView(UIWebView) 使用
  */
-public class DailyBean extends MultiItemEntity implements Parcelable {
+public class DailyBean implements Parcelable {
     private int type;
 
     private int id;
@@ -44,112 +42,94 @@ public class DailyBean extends MultiItemEntity implements Parcelable {
 
     private String Date;
 
-    public String getDate()
-    {
+    public String getDate() {
 
         return Date;
     }
 
-    public void setDate(String date)
-    {
+    public void setDate(String date) {
 
         Date = date;
     }
 
-    public int getType()
-    {
+    public int getType() {
 
         return type;
     }
 
-    public void setType(int type)
-    {
+    public void setType(int type) {
 
         this.type = type;
     }
 
-    public int getId()
-    {
+    public int getId() {
 
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
 
         this.id = id;
     }
 
-    public String getGa_prefix()
-    {
+    public String getGa_prefix() {
 
         return ga_prefix;
     }
 
-    public void setGa_prefix(String ga_prefix)
-    {
+    public void setGa_prefix(String ga_prefix) {
 
         this.ga_prefix = ga_prefix;
     }
 
-    public String getTitle()
-    {
+    public String getTitle() {
 
         return title;
     }
 
-    public void setTitle(String title)
-    {
+    public void setTitle(String title) {
 
         this.title = title;
     }
 
-    public List<String> getImages()
-    {
+    public List<String> getImages() {
 
         return images;
     }
 
-    public void setImages(List<String> images)
-    {
+    public void setImages(List<String> images) {
 
         this.images = images;
     }
 
-    public boolean isRead()
-    {
+    public boolean isRead() {
 
         return isRead;
     }
 
-    public void setRead(boolean read)
-    {
+    public void setRead(boolean read) {
 
         isRead = read;
     }
 
-    public boolean isMultipic()
-    {
+    public boolean isMultipic() {
 
         return multipic;
     }
 
-    public void setMultipic(boolean multipic)
-    {
+    public void setMultipic(boolean multipic) {
 
         this.multipic = multipic;
     }
 
     @Override
-    public int describeContents()
-    {
+    public int describeContents() {
 
         return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags)
-    {
+    public void writeToParcel(Parcel dest, int flags) {
 
         dest.writeInt(this.type);
         dest.writeInt(this.id);
@@ -159,13 +139,8 @@ public class DailyBean extends MultiItemEntity implements Parcelable {
         dest.writeByte(isRead ? (byte) 1 : (byte) 0);
     }
 
-    public DailyBean()
-    {
 
-    }
-
-    protected DailyBean(Parcel in)
-    {
+    protected DailyBean(Parcel in) {
 
         this.type = in.readInt();
         this.id = in.readInt();
@@ -175,17 +150,14 @@ public class DailyBean extends MultiItemEntity implements Parcelable {
         this.isRead = in.readByte() != 0;
     }
 
-    public static final Parcelable.Creator<DailyBean> CREATOR = new Parcelable.Creator<DailyBean>()
-    {
+    public static final Parcelable.Creator<DailyBean> CREATOR = new Parcelable.Creator<DailyBean>() {
 
-        public DailyBean createFromParcel(Parcel source)
-        {
+        public DailyBean createFromParcel(Parcel source) {
 
             return new DailyBean(source);
         }
 
-        public DailyBean[] newArray(int size)
-        {
+        public DailyBean[] newArray(int size) {
 
             return new DailyBean[size];
         }

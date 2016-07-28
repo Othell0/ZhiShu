@@ -57,30 +57,33 @@
             android:layout_marginTop="30dp"
             android:autoLink="web"
             android:text="GitHub:https://github.com/Othell0"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:autoLink="email"
             android:text="Gmail:willowlikepine@gmail.com"
-            android:textSize="14dp" />
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="66dp"
             android:text="人之情多矫，世之俗多伪，岂可信乎？"
-            android:textSize="18dp" />
+            android:typeface="serif"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="end"
-
+            android:typeface="sans"
             android:text="---来俊臣《罗织经》"
-            android:textSize="18dp" />
+            android:textSize="16sp" />
 
 
     </LinearLayout>

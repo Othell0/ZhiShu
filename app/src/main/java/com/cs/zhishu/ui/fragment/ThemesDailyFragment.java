@@ -90,7 +90,7 @@ public class ThemesDailyFragment extends LazyFragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         DailyTypeRecycleAdapter mAdapter = new DailyTypeRecycleAdapter(others);
-        mAdapter.openLoadAnimation();
+        mAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override

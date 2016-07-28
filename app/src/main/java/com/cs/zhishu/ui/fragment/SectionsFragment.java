@@ -98,7 +98,7 @@ public class SectionsFragment extends LazyFragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         SectionsAdapter mAdapter = new SectionsAdapter(sectionsInfos);
-        mAdapter.openLoadAnimation();
+        mAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override

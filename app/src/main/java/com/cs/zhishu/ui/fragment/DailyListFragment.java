@@ -136,7 +136,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
 
                 super.onScrolled(recyclerView, dx, dy);
-                //int firstPos = (recyclerView == null || recyclerView.getChildCount() == 0 ? 0 : recyclerView.getChildAt(0).getTop());
 
                 mSwipeRefreshLayout.setEnabled(mLinearLayoutManager.findFirstCompletelyVisibleItemPosition() == 0);
             }
@@ -166,8 +165,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
         mHeaderViewRecyclerAdapter.addHeaderView(headView);
         getLatesDailys(false);
     }
-
-
 
 
     public void getLatesDailys(final boolean isDownRefresh) {
@@ -376,7 +373,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
     @Override
     public void onDestroy() {
-        // TODO Auto-generated method stub
+
         super.onDestroy();
         if (mTimer != null) {
             mTimer.cancel();
