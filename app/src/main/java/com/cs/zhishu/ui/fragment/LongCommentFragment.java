@@ -83,8 +83,9 @@ public class LongCommentFragment extends LazyFragment {
                         if (comments != null && comments.size() > 0) {
                             longCommentinfos.addAll(comments);
                             finishGetLongComment();
+                        } else {
+                            mEmptyView.setVisibility(View.VISIBLE);
                         }
-                        mEmptyView.setVisibility(View.VISIBLE);
 
 
                     }
