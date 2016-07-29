@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -23,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -60,6 +60,25 @@ public class DailyRecommendEditorsActivity extends AbsBaseActivity {
     @Override
     public int getLayoutId() {
         return R.layout.activity_daily_recommend_editors;
+    }
+
+    @Override
+    public void initToolBar() {
+        mToolbar.setTitle("日报推荐者");
+        setSupportActionBar(mToolbar);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null)
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -120,7 +139,7 @@ public class DailyRecommendEditorsActivity extends AbsBaseActivity {
     }
 
     private void finishGetEditors() {
-        mAdapter =new RecommendEditorAdapter(editorList);
+        mAdapter = new RecommendEditorAdapter(editorList);
         mAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -140,16 +159,6 @@ public class DailyRecommendEditorsActivity extends AbsBaseActivity {
         mCircleProgressView.stopAnimation();
 
         mTextView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void initToolBar() {
-        mToolbar.setTitle("日报推荐者");
-        setSupportActionBar(mToolbar);
-        ActionBar supportActionBar = getSupportActionBar();
-        if (supportActionBar != null)
-            supportActionBar.setDisplayHomeAsUpEnabled(true);
-
     }
 
 

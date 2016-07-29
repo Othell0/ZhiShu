@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
-import com.cs.zhishu.base.BaseSwipeBackActivity;
 import com.cs.zhishu.model.DailyBean;
 import com.cs.zhishu.model.DailyDetail;
 import com.cs.zhishu.model.DailyExtraMessage;
@@ -155,7 +154,7 @@ public class DailyDetailActivity extends AbsBaseActivity {
 
             case R.id.menu_action_comment:
                 // 查看新闻评论
-                DailyCommentActivity.luancher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId(), mDailyExtraMessage.comments, mDailyExtraMessage.longComments, mDailyExtraMessage.shortComments);
+                DailyCommentActivity.launcher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId(), mDailyExtraMessage.comments, mDailyExtraMessage.longComments, mDailyExtraMessage.shortComments);
                 return true;
 
             case R.id.menu_action_parise:
