@@ -8,7 +8,9 @@ import java.util.ArrayList;
 /**
  * Created by exbbefl on 7/15/2016.
  */
-public class Stories {
+public class Stories
+{
+
     private int id;
 
     private String title;

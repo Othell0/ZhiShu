@@ -149,7 +149,7 @@ public class DailyDetailActivity extends AbsBaseActivity {
 
             case R.id.menu_action_fav:
                 //查看新闻推荐者
-                DailyRecommendEditorsActivity.luancher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId());
+                DailyRecommendEditorsActivity.launcher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId());
                 return true;
 
             case R.id.menu_action_comment:
@@ -284,7 +284,7 @@ public class DailyDetailActivity extends AbsBaseActivity {
 
     }
 
-    public static void lanuch(Context context, DailyBean dailyBean) {
+    public static void launch(Context context, DailyBean dailyBean) {
 
         Intent mIntent = new Intent(context, DailyDetailActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -292,7 +292,7 @@ public class DailyDetailActivity extends AbsBaseActivity {
         context.startActivity(mIntent);
     }
 
-    public static void lanuch(Context context, int id) {
+    public static void launch(Context context, int id) {
 
         Intent mIntent = new Intent(context, DailyDetailActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

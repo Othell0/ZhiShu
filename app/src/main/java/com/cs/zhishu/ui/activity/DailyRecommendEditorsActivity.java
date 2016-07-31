@@ -50,7 +50,7 @@ public class DailyRecommendEditorsActivity extends AbsBaseActivity {
 
     private RecommendEditorAdapter mAdapter;
 
-    public static void luancher(Activity activity, int id) {
+    public static void launcher(Activity activity, int id) {
         Intent mIntent = new Intent(activity, DailyRecommendEditorsActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mIntent.putExtra(EXTRA_ID, id);

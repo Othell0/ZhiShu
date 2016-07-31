@@ -104,7 +104,7 @@ public class SectionsFragment extends LazyFragment {
             @Override
             public void onItemClick(View view, int position) {
                 DailySections.DailySectionsInfo dailySectionsInfo = sectionsInfos.get(position);
-                SectionsDetailsActivity.Luanch(getActivity(), dailySectionsInfo.id);
+                SectionsDetailsActivity.launch(getActivity(), dailySectionsInfo.id);
 
             }
 

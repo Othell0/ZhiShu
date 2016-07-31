@@ -51,27 +51,27 @@
         <!--主题日报详情界面-->
         <activity
             android:name=".ui.activity.ThemesDailyDetailsActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <!--日报评论界面-->
         <activity
             android:name=".ui.activity.DailyCommentActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <!--专栏详情界面-->
-      <!--  <activity
+        <activity
             android:name=".ui.activity.SectionsDetailsActivity"
-            android:screenOrientation="portrait"/>-->
+            android:screenOrientation="portrait" />
         <!--日报内容详情界面-->
         <activity
             android:name=".ui.activity.DailyDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.TransparentStatusBar"/>
+            android:theme="@style/AppTheme.TransparentStatusBar" />
 
         <!--日报推荐者查看界面-->
         <activity
             android:name=".ui.activity.DailyRecommendEditorsActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
     </application>
 

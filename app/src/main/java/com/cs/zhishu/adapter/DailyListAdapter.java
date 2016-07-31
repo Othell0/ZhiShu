@@ -134,7 +134,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
                     }).start();
                 }
                 //跳转到详情界面
-                DailyDetailActivity.lanuch(mContext, dailyBean);
+                DailyDetailActivity.launch(mContext, dailyBean);
             }
         });
     }

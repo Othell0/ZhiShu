@@ -59,7 +59,7 @@ public class MainViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
 
-                DailyDetailActivity.lanuch(context, id);
+                DailyDetailActivity.launch(context, id);
             }
         });
         container.addView(view);

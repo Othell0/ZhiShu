@@ -102,7 +102,7 @@ public class HotNewsFragment extends LazyFragment {
             @Override
             public void onItemClick(View view, int position) {
                 HotNews.HotNewsInfo hotNewsInfo = hotNewsInfos.get(position);
-                DailyDetailActivity.lanuch(getActivity(), hotNewsInfo.newsId);
+                DailyDetailActivity.launch(getActivity(), hotNewsInfo.newsId);
 
 
             }

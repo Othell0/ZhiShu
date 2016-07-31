@@ -73,6 +73,9 @@ public class ThemesDailyFragment extends LazyFragment {
                     @Override
                     public void onError(Throwable e) {
 
+                        Log.e("ThemesDailyFragment", "onError");
+
+
                     }
 
                     @Override
@@ -96,7 +99,7 @@ public class ThemesDailyFragment extends LazyFragment {
             @Override
             public void onItemClick(View view, int position) {
                 DailyTypeBean.SubjectDaily subjectDaily = others.get(position);
-                ThemesDailyDetailsActivity.Luanch(getActivity(), subjectDaily.getId());
+                ThemesDailyDetailsActivity.launch(getActivity(), subjectDaily.getId());
 
             }
 
