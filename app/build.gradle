@@ -5,12 +5,13 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+
     defaultConfig {
         applicationId "com.cs.zhishu"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 9527
+        versionName "2.233"
     }
     buildTypes {
         release {
@@ -55,8 +56,11 @@ dependencies {
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
 
     compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    /*bmob后端云*/
     compile 'cn.bmob.android:bmob-sdk:3.4.6'
-    compile 'cn.bmob.android:http-legacy:1.0'
+
+
     compile 'com.nineoldandroids:library:2.4.0'
 
     /* retrofit2 + okhttp3*/

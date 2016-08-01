@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,6 @@ import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
 import com.cs.zhishu.base.ZhiShu;
 import com.cs.zhishu.model.zhishuMessage;
-import com.facebook.stetho.common.LogUtil;
 
 import butterknife.BindView;
 import cn.bmob.v3.listener.SaveListener;
@@ -78,9 +78,6 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
     }
 
 
-
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -108,7 +105,7 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
     private void sendFeedBackText(String text) {
         zhishuMessage mMessage = new zhishuMessage();
         mMessage.setContent(text);
-        mMessage.save(this, new SaveListener() {
+        mMessage.save(MessageActivity.this, new SaveListener() {
             @Override
             public void onSuccess() {
                 Snackbar.make(mFeedBack, "提交成功", Snackbar.LENGTH_SHORT).show();
@@ -118,9 +115,7 @@ public class MessageActivity extends AbsBaseActivity implements View.OnClickList
             @Override
             public void onFailure(int errorCode, String errorMsg) {
                 Snackbar.make(mFeedBack, "提交失败", Snackbar.LENGTH_SHORT).show();
-                LogUtil.e(errorMsg);
-
-
+                Log.e("sendFeedBackText", "onFailure:");
             }
         });
     }

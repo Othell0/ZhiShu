@@ -314,12 +314,12 @@ public class DailyListFragment extends LazyFragment implements Runnable {
     /**
      * 缓存数据
      *
-     * @param dailys
+     * @param dailies
      */
-    private void cacheAllDetail(List<DailyBean> dailys) {
+    private void cacheAllDetail(List<DailyBean> dailies) {
 
         if (NetWorkUtil.isWifiConnected()) {
-            for (DailyBean daily : dailys) {
+            for (DailyBean daily : dailies) {
                 cacheNewsDetail(daily.getId());
             }
         }
