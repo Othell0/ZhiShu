@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static java.lang.System.currentTimeMillis;
 
 
 /*知书主界面*/
@@ -32,8 +37,11 @@ public class MainActivity extends AbsBaseActivity {
     Toolbar mToolbar;
     @BindView(R.id.bottom_navigation)
     AHBottomNavigation mAhBottomNavigation;
+    @BindView(R.id.drawer_layout)
+    CoordinatorLayout drawerLayout;
     private List<Fragment> fragments = new ArrayList<>();
     private int currentTabIndex;
+    private long exitTime = 0;
 
 
     @Override
@@ -78,19 +86,15 @@ public class MainActivity extends AbsBaseActivity {
         mAhBottomNavigation.setDefaultBackgroundColor(getResources().getColor(R.color.bg_color));
 
 
-        mAhBottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener()
-        {
+        mAhBottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
 
             @Override
-            public void onTabSelected(int position, boolean wasSelected)
-            {
+            public void onTabSelected(int position, boolean wasSelected) {
 
-                if (currentTabIndex != position)
-                {
+                if (currentTabIndex != position) {
                     FragmentTransaction trx = getFragmentManager().beginTransaction();
                     trx.hide(fragments.get(currentTabIndex));
-                    if (!fragments.get(position).isAdded())
-                    {
+                    if (!fragments.get(position).isAdded()) {
                         trx.add(R.id.content, fragments.get(position));
                     }
                     trx.show(fragments.get(position)).commit();
@@ -140,6 +144,16 @@ public class MainActivity extends AbsBaseActivity {
         return super.onPrepareOptionsMenu(menu);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (currentTimeMillis() - exitTime > 2000) {
+            Snackbar.make(drawerLayout, "再按一次将退出", Snackbar.LENGTH_SHORT).show();
+            exitTime = currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+        }
+    }
 
 
 }

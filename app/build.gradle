@@ -23,46 +23,33 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-v4:23.4.0'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:cardview-v7:23.4.0'
     compile 'com.android.support:support-v13:23.4.0'
-
     compile 'de.hdodenhof:circleimageview:2.0.0'
-
     /*RecyclerViewAdapterHelper*/
-
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.3'
-
     /*黄油刀注解*/
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
-
     /*BottomBar*/
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.aurelhubert:ahbottomnavigation:1.2.3'
-
     /*工具库*/
     compile 'com.github.lazylibrary:lazylibrary:1.0.2'
     compile 'com.code19.library:library:0.0.7'
-
     /*毛玻璃效果*/
     compile 'jp.wasabeef:glide-transformations:2.0.1'
-
     /*SwipeBackLayout*/
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
-
     compile 'com.github.bumptech.glide:glide:3.7.0'
-
     /*bmob后端云*/
     compile 'cn.bmob.android:bmob-sdk:3.4.6'
-
-
     compile 'com.nineoldandroids:library:2.4.0'
-
     /* retrofit2 + okhttp3*/
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
@@ -73,18 +60,14 @@ dependencies {
     compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
     /*圆点指示器*/
     compile 'me.relex:circleindicator:1.2.1@aar'
-
     /*RxJava*/
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
-
     compile 'com.facebook.stetho:stetho:1.3.1'
     compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
-
     compile 'io.realm:realm-android:0.87.0'
-
     compile 'org.jsoup:jsoup:1.8.3'
-
-
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile project(':wx')
+
 }
