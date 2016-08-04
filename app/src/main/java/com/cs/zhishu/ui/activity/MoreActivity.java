@@ -6,18 +6,18 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.alibaba.mobileim.FeedbackAPI;
 import com.cs.zhishu.R;
 import com.cs.zhishu.base.AbsBaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Othell0 on 2016/6/30.
  */
 public class MoreActivity extends AbsBaseActivity {
-
+    public static final String APP_KEY = "23425913";
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
@@ -31,7 +31,10 @@ public class MoreActivity extends AbsBaseActivity {
     @Override
     public void initViews(Bundle savedInstanceState) {
 
+
+
     }
+
 
     @Override
     public void initToolBar() {
@@ -42,8 +45,6 @@ public class MoreActivity extends AbsBaseActivity {
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
     }
-
-
 
 
     @Override
@@ -65,7 +66,11 @@ public class MoreActivity extends AbsBaseActivity {
     @OnClick(R.id.more_btn_feed_back)
     void startFeedBack() {
 
-        startActivity(new Intent(MoreActivity.this, MessageActivity.class));
+        Intent intent = FeedbackAPI.getFeedbackActivityIntent();
+        if (intent != null) {
+            startActivity(intent);
+        }
+
     }
 
     @OnClick(R.id.more_btn_setting)
@@ -80,11 +85,8 @@ public class MoreActivity extends AbsBaseActivity {
     }
 
 
-
     @OnClick(R.id.more_btn_answer)
     void startTuling() {
         startActivity(new Intent(MoreActivity.this, TRClientActivity.class));
-
-
     }
 }

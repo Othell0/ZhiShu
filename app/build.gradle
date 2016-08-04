@@ -12,12 +12,17 @@ android {
         targetSdkVersion 23
         versionCode 9527
         versionName "2.233"
+        multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dexOptions{
+        javaMaxHeapSize "2g"
     }
 
 }
@@ -47,9 +52,7 @@ dependencies {
     /*SwipeBackLayout*/
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    /*bmob后端云*/
-    compile 'cn.bmob.android:bmob-sdk:3.4.6'
-    compile 'com.nineoldandroids:library:2.4.0'
+
     /* retrofit2 + okhttp3*/
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
@@ -60,6 +63,8 @@ dependencies {
     compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
     /*圆点指示器*/
     compile 'me.relex:circleindicator:1.2.1@aar'
+    /*友盟统计分析*/
+    compile 'com.umeng.analytics:analytics:latest.integration'
     /*RxJava*/
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
@@ -70,4 +75,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile project(':wx')
 
+    compile 'com.android.support:multidex:1.0.1'
 }
