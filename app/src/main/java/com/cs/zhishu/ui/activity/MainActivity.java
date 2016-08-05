@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -147,7 +146,7 @@ public class MainActivity extends AbsBaseActivity {
     @Override
     public void onBackPressed() {
         if (currentTimeMillis() - exitTime > 2000) {
-            Snackbar.make(drawerLayout, "再按一次将退出", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(drawerLayout, "再按一次退出程序", Snackbar.LENGTH_SHORT).show();
             exitTime = currentTimeMillis();
         } else {
             finish();
