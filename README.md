@@ -9,5 +9,5 @@ Glide
 BaseRecyclerViewAdapterHelper
 ButterKnife
 ##Thanks
-ZhihuDailyPurify [https://github.com/izzyleung/ZhihuDailyPurify]
+[ZhihuDailyPurify](https://github.com/izzyleung/ZhihuDailyPurify)
 
