@@ -5,8 +5,8 @@ A awesome App to view something you must enjoy it.
 RxJava  
 RxAndroid  
 Retrefit  
-Glide
-BaseRecyclerViewAdapterHelper
+Glide  
+BaseRecyclerViewAdapterHelper  
 ButterKnife
 ##Thanks
 API from [ZhihuDailyPurify](https://github.com/izzyleung/ZhihuDailyPurify)
