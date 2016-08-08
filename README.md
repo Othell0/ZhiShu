@@ -1,11 +1,10 @@
 # zhishu
 ##Profile
-An
-awesome App to view something you must enjoy it.
+An awesome App to view something you must enjoy it.
 ##Open source libraries
 RxJava  
 RxAndroid  
-Retrefit  
+Retrofit  
 Glide  
 BaseRecyclerViewAdapterHelper  
 ButterKnife
