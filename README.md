@@ -1,10 +1,13 @@
 # zhishu
 ##Profile
-A project for myself to learn Android project.
+A awesome App to view something you must enjoy it.
 ##Open source libraries
 RxJava  
 RxAndroid  
 Retrefit  
 Glide
-
+BaseRecyclerViewAdapterHelper
+ButterKnife
+##Thanks
+ZhihuDailyPurify [https://github.com/izzyleung/ZhihuDailyPurify]
 
