@@ -3,7 +3,7 @@ package com.cs.zhishu.model;
 /**
  * Created by Othell0 on 2016/7/13.
  */
-public class LuanchImageBean {
+public class LaunchImageBean {
     private String text;
 
     private String img;
@@ -36,7 +36,7 @@ public class LuanchImageBean {
     public String toString()
     {
 
-        return "LuanchImageBean{" +
+        return "LaunchImageBean{" +
                 "text='" + text + '\'' +
                 ", img='" + img + '\'' +
                 '}';

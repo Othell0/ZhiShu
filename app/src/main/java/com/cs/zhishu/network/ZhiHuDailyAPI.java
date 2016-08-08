@@ -8,7 +8,7 @@ import com.cs.zhishu.model.DailyRecommend;
 import com.cs.zhishu.model.DailySections;
 import com.cs.zhishu.model.DailyTypeBean;
 import com.cs.zhishu.model.HotNews;
-import com.cs.zhishu.model.LuanchImageBean;
+import com.cs.zhishu.model.LaunchImageBean;
 import com.cs.zhishu.model.SectionsDetails;
 import com.cs.zhishu.model.ThemesDetails;
 
@@ -54,7 +54,7 @@ public interface ZhiHuDailyAPI {
      * @return
      */
     @GET("start-image/{res}")
-    Observable<LuanchImageBean> getLuanchImage(@Path("res") String res);
+    Observable<LaunchImageBean> getLuanchImage(@Path("res") String res);
 
     /**
      * 获取专题日报

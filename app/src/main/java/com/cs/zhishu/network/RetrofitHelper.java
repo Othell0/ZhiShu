@@ -7,7 +7,7 @@ import com.cs.zhishu.model.DailyExtraMessage;
 import com.cs.zhishu.model.DailyListBean;
 import com.cs.zhishu.model.DailyRecommend;
 import com.cs.zhishu.model.DailyTypeBean;
-import com.cs.zhishu.model.LuanchImageBean;
+import com.cs.zhishu.model.LaunchImageBean;
 import com.cs.zhishu.model.ThemesDetails;
 import com.cs.zhishu.util.NetWorkUtil;
 
@@ -178,7 +178,7 @@ public class RetrofitHelper {
         return mZhiHuApi.getNewsDetails(id);
     }
 
-    public Observable<LuanchImageBean> getLuanchImage(String res) {
+    public Observable<LaunchImageBean> getLaunchImage(String res) {
 
         return mZhiHuApi.getLuanchImage(res);
     }

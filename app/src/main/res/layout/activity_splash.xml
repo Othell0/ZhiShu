@@ -5,7 +5,7 @@
     android:fitsSystemWindows="true">
 
     <ImageView
-        android:id="@+id/iv_spalsh"
+        android:id="@+id/iv_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY" />
