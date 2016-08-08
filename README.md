@@ -1,6 +1,7 @@
 # zhishu
 ##Profile
-A awesome App to view something you must enjoy it.
+An
+awesome App to view something you must enjoy it.
 ##Open source libraries
 RxJava  
 RxAndroid  
