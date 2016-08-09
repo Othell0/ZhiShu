@@ -32,7 +32,7 @@ public class SplashActivity extends Activity {
 
     private static final int ANIMATION_DURATION = 3000;
 
-    private static final float SCALE_END = 1.13F;
+    private static final float SCALE_END = 1.15F;
     @BindView(R.id.iv_splash)
     ImageView ivSplash;
     @BindView(R.id.tv_from)
