@@ -2,7 +2,7 @@
 ##Profile
 An awesome App to view something you must enjoy it.  
 ![zhishu sketch] (ZhiShu/app/src/main/res/drawable-xxhdpi/zhishu.png)  
-![zhishu GIF] (ZhiShu/app/src/main/res/drawable-xxhdpi/20160809_103102.gif)
+![zhishu GIF] (F:\Apowersoft Screen Recorder Pro 2\Asset)
 ##Open source libraries
 RxJava  
 RxAndroid  
