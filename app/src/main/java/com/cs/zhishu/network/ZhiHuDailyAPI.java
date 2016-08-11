@@ -54,7 +54,7 @@ public interface ZhiHuDailyAPI {
      * @return
      */
     @GET("start-image/{res}")
-    Observable<LaunchImageBean> getLuanchImage(@Path("res") String res);
+    Observable<LaunchImageBean> getLaunchImage(@Path("res") String res);
 
     /**
      * 获取专题日报

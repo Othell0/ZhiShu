@@ -180,7 +180,7 @@ public class RetrofitHelper {
 
     public Observable<LaunchImageBean> getLaunchImage(String res) {
 
-        return mZhiHuApi.getLuanchImage(res);
+        return mZhiHuApi.getLaunchImage(res);
     }
 
     public Observable<DailyTypeBean> getDailyType() {
