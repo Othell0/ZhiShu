@@ -26,7 +26,7 @@
         </activity>
         <!-- 关于知书 -->
         <activity
-            android:name=".ui.activity.AboutAPPActivity"
+            android:name=".ui.activity.AboutAppActivity"
             android:screenOrientation="portrait" />
         <!-- 更多选项 -->
         <activity

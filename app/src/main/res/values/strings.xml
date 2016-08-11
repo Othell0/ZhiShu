@@ -19,5 +19,10 @@
     <string name="about">关于</string>
     <string name="about_version">1.0</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="github">GitHub:https://github.com/Othell0</string>
+    <string name="gmail">Gmail:willowlikepine@gmail.com</string>
+    <string name="content">人之情多矫，世之俗多伪，岂可信乎？</string>
+    <string name="author">---来俊臣《罗织经》</string>
+    <string name="info_name">Othell0</string>
 
 </resources>

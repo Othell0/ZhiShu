@@ -21,7 +21,6 @@ import com.cs.zhishu.network.TRApi;
 import com.cs.zhishu.network.TRService;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;

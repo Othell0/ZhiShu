@@ -21,7 +21,9 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     </android.support.design.widget.AppBarLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Othell0"
+            android:text="@string/info_name"
             android:textColor="@color/font_normal"
             android:textSize="20sp" />
 
@@ -57,38 +59,39 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:autoLink="web"
-            android:text="GitHub:https://github.com/Othell0"
+            android:text="@string/github"
             android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:autoLink="email"
-            android:text="Gmail:willowlikepine@gmail.com"
-            android:textSize="14sp"
-            android:layout_gravity="center_horizontal" />
+            android:text="@string/gmail"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="66dp"
-            android:text="人之情多矫，世之俗多伪，岂可信乎？"
-            android:typeface="serif"
-            android:textSize="16sp" />
+            android:text="@string/content"
+            android:textSize="16sp"
+            android:typeface="serif" />
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_gravity="end"
-            android:typeface="sans"
-            android:text="---来俊臣《罗织经》"
-            android:textSize="16sp" />
+            android:layout_marginTop="10dp"
+            android:text="@string/author"
+            android:textSize="16sp"
+            android:typeface="sans" />
 
 
     </LinearLayout>
+
 
 </LinearLayout>

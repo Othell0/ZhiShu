@@ -10,21 +10,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBOpenHelper extends SQLiteOpenHelper {
     private static DBOpenHelper instance;
 
-    private DBOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
-    {
+    private DBOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
 
         super(context, name, factory, version);
     }
 
-    public static DBOpenHelper getInstance(Context context)
-    {
+    public static DBOpenHelper getInstance(Context context) {
 
-        if (instance == null)
-        {
-            synchronized (DBOpenHelper.class)
-            {
-                if (instance == null)
-                {
+        if (instance == null) {
+            synchronized (DBOpenHelper.class) {
+                if (instance == null) {
                     instance = new DBOpenHelper(context.getApplicationContext(), DBConstant.DB_NAME, null, DBConstant.DB_VERSION);
                 }
             }
@@ -33,15 +28,13 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db)
-    {
+    public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(DBConstant.CREATE_TABLE_READ);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
-    {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 }

@@ -81,7 +81,7 @@ public class MoreActivity extends AbsBaseActivity {
     @OnClick(R.id.more_btn_about_app)
     void startAboutApp() {
 
-        startActivity(new Intent(MoreActivity.this, AboutAPPActivity.class));
+        startActivity(new Intent(MoreActivity.this, AboutAppActivity.class));
     }
 
 

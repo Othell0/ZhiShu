@@ -14,14 +14,12 @@ import java.util.List;
 public class DailyDao {
     private DBOpenHelper helper;
 
-    public DailyDao(Context context)
-    {
+    public DailyDao(Context context) {
 
         helper = DBOpenHelper.getInstance(context);
     }
 
-    public void insertReadNew(String id)
-    {
+    public void insertReadNew(String id) {
 
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -29,21 +27,22 @@ public class DailyDao {
         long insertNum = db.insert(DBConstant.TABLE_READ, null, cv);
     }
 
-    public List<String> getAllReadNew()
-    {
+    public List<String> getAllReadNew() {
 
         List<String> list = new ArrayList<>();
         SQLiteDatabase db = helper.getReadableDatabase();
         String sqlQuery = "select * from " + DBConstant.TABLE_READ;
         Cursor cursor = db.rawQuery(sqlQuery, null);
-        if (cursor.moveToFirst())
-        {
-            do
-            {
+
+        if (cursor.moveToFirst()) {
+            do {
                 String id = cursor.getString(0);
                 list.add(id);
             } while (cursor.moveToNext());
+            cursor.close();
         }
         return list;
+
     }
+
 }

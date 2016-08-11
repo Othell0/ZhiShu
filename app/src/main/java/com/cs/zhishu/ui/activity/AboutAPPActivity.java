@@ -15,7 +15,7 @@ import com.github.lazylibrary.util.AppUtils;
 
 import butterknife.BindView;
 
-public class AboutAPPActivity extends AbsBaseActivity {
+public class AboutAppActivity extends AbsBaseActivity {
 
 
     @BindView(R.id.tv_version)
@@ -51,7 +51,7 @@ public class AboutAPPActivity extends AbsBaseActivity {
         mCollapsingToolbarLayout.setTitle("关于知书");
 
         String version = AppUtils.getVerName(this);
-        mVersionTv.setText("版本号:" + "V" + "" + version);
+        mVersionTv.setText(String.format("版本号:V%s", version));
 
     }
 
