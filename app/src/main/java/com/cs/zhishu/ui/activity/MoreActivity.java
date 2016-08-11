@@ -17,7 +17,6 @@ import butterknife.OnClick;
  * Created by Othell0 on 2016/6/30.
  */
 public class MoreActivity extends AbsBaseActivity {
-    public static final String APP_KEY = "23425913";
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
@@ -30,7 +29,6 @@ public class MoreActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-
 
 
     }
@@ -80,7 +78,6 @@ public class MoreActivity extends AbsBaseActivity {
 
     @OnClick(R.id.more_btn_about_app)
     void startAboutApp() {
-
         startActivity(new Intent(MoreActivity.this, AboutAppActivity.class));
     }
 
