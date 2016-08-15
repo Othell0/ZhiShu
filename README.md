@@ -1,4 +1,4 @@
-# zhishu
+# ZhiShu
 ##Profile
 An awesome App to view something you must enjoy it.  
 ![zhishu GIF] (https://github.com/Othell0/ZhiShu/blob/master/app/src/main/res/drawable-xxhdpi/introduce.gif?raw=true)
