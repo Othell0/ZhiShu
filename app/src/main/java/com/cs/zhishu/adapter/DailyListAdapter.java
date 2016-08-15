@@ -95,7 +95,6 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     }
 
 
-
     private void setDailyDate(final ItemContentViewHolder holder, final DailyBean dailyBean) {
 
         holder.mTitle.setText(dailyBean.getTitle());
