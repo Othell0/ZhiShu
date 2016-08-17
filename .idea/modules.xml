@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZhiShu.iml" filepath="$PROJECT_DIR$/ZhiShu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/wx/wx.iml" filepath="$PROJECT_DIR$/wx/wx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhishu.iml" filepath="$PROJECT_DIR$/zhishu.iml" />
     </modules>
   </component>
 </project>

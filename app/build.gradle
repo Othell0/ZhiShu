@@ -10,8 +10,9 @@ android {
         applicationId "com.cs.zhishu"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 9527
-        versionName "2.233"
+        versionCode 32125
+        versionName "2.238"
+        /*解决64K问题*/
         multiDexEnabled true
     }
 
@@ -63,6 +64,8 @@ dependencies {
     compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
     /*圆点指示器*/
     compile 'me.relex:circleindicator:1.2.1@aar'
+    /*更新插件*/
+    compile 'org.lzh.nonview.updateplugin:UpdatePlugin:0.6.2'
     /*友盟统计分析*/
     compile 'com.umeng.analytics:analytics:latest.integration'
     /*RxJava*/
@@ -72,8 +75,8 @@ dependencies {
     compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
     compile 'io.realm:realm-android:0.87.0'
     compile 'org.jsoup:jsoup:1.8.3'
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.google.android.gms:play-services-appindexing:7.5.0'
     compile project(':wx')
-
+    /*解决64K问题*/
     compile 'com.android.support:multidex:1.0.1'
 }

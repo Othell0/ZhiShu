@@ -19,6 +19,8 @@ import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
 
+import org.lzh.framework.updatepluginlib.UpdateBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +52,9 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+
+        /*Activity中进行更新检查*/
+        UpdateBuilder.create().check(MainActivity.this);
 
 
         fragments.add(DailyListFragment.newInstance());
