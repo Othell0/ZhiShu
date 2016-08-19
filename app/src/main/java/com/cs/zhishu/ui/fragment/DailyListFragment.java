@@ -59,7 +59,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
             super.handleMessage(msg);
             if (msg.what == 0) {
-                getLatesDailys(true);
+                getLatestDailies(true);
             } else if (msg.what == 1) {
                 hideProgress();
                 mSwipeRefreshLayout.setRefreshing(false);
@@ -68,11 +68,9 @@ public class DailyListFragment extends LazyFragment implements Runnable {
         }
     };
 
-    private DailyListAdapter mAdapter;
-
     private AutoLoadOnScrollListener mAutoLoadOnScrollListener;
 
-    private List<DailyBean> dailys = new ArrayList<>();
+    private List<DailyBean> dailies = new ArrayList<>();
 
     private LinearLayoutManager mLinearLayoutManager;
 
@@ -82,13 +80,15 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
     private int size;
 
+    private DailyListAdapter mAdapter;
+
     private MainViewPagerAdapter mMainViewPagerAdapter;
+
+    private HeaderViewRecyclerAdapter mHeaderViewRecyclerAdapter;
 
     private ViewPager mViewPager;
 
     private CircleIndicator mCircleIndicator;
-
-    private HeaderViewRecyclerAdapter mHeaderViewRecyclerAdapter;
 
     private Timer mTimer;
 
@@ -120,7 +120,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
         });
 
 
-        mAdapter = new DailyListAdapter(getActivity(), dailys);
+        mAdapter = new DailyListAdapter(getActivity(), dailies);
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
@@ -163,11 +163,12 @@ public class DailyListFragment extends LazyFragment implements Runnable {
             }
         });
         mHeaderViewRecyclerAdapter.addHeaderView(headView);
-        getLatesDailys(false);
+        getLatestDailies(false);
     }
 
 
-    public void getLatesDailys(final boolean isDownRefresh) {
+
+    public void getLatestDailies(final boolean isDownRefresh) {
 
         RetrofitHelper.builder().getLatestNews()
                 .subscribeOn(Schedulers.io())

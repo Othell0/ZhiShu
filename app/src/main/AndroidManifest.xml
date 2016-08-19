@@ -41,37 +41,36 @@
         <activity
             android:name=".ui.activity.TRClientActivity"
             android:screenOrientation="portrait" />
-        <!--主界面-->
+        <!-- 主界面 -->
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <!--主题日报详情界面-->
+        <!-- 主题日报详情界面 -->
         <activity
             android:name=".ui.activity.ThemesDailyDetailsActivity"
             android:screenOrientation="portrait" />
 
-        <!--日报评论界面-->
+        <!-- 日报评论界面 -->
         <activity
             android:name=".ui.activity.DailyCommentActivity"
             android:screenOrientation="portrait" />
 
-        <!--专栏详情界面-->
+        <!-- 专栏详情界面 -->
         <activity
             android:name=".ui.activity.SectionsDetailsActivity"
             android:screenOrientation="portrait" />
-        <!--日报内容详情界面-->
+        <!-- 日报内容详情界面 -->
         <activity
             android:name=".ui.activity.DailyDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.TransparentStatusBar" />
 
-        <!--日报推荐者查看界面-->
+        <!-- 日报推荐者查看界面 -->
         <activity
             android:name=".ui.activity.DailyRecommendEditorsActivity"
             android:screenOrientation="portrait" />
-
-
+        <activity android:name=".ui.activity.SettingActivity"></activity>
     </application>
 
 </manifest>

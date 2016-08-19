@@ -4,6 +4,7 @@ package com.cs.zhishu.base;
 
 import android.app.Application;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.alibaba.mobileim.FeedbackAPI;
 import com.alibaba.mobileim.YWAPI;
@@ -12,15 +13,19 @@ import com.cs.zhishu.R;
 import com.github.lazylibrary.util.AppUtils;
 
 import org.lzh.framework.updatepluginlib.UpdateConfig;
+import org.lzh.framework.updatepluginlib.callback.UpdateCheckCB;
+import org.lzh.framework.updatepluginlib.callback.UpdateDownloadCB;
 import org.lzh.framework.updatepluginlib.model.Update;
 import org.lzh.framework.updatepluginlib.model.UpdateParser;
+
+import java.io.File;
 
 /**
  * Created by Othell0 on 2016/7/6.
  */
 
 public class ZhiShu extends Application {
-    private static final String APK_FILE ="http://fir.im/Othell0" ;
+    private static final String APK_FILE = "http://fir.im/Othell0";
     private static Context sContext;
 
 
@@ -32,6 +37,14 @@ public class ZhiShu extends Application {
 
     @Override
     public void onCreate() {
+
+        super.onCreate();
+        initFeedBack();
+        initUpdate();
+
+    }
+
+    private void initFeedBack() {
         /*实时反馈模块*/
         SysUtil.setApplication(this);
         if (SysUtil.isTCMSServiceProcess(this)) {
@@ -43,7 +56,10 @@ public class ZhiShu extends Application {
         if (SysUtil.isMainProcess(this)) {
             FeedbackAPI.initFeedback(this, APP_KEY, "意见反馈", null);
         }
-        super.onCreate();
+
+    }
+
+    private void initUpdate() {
         /*自动更新模块*/
         UpdateConfig.getConfig()
                 // 必填：数据更新接口,url与checkEntity两种方式任选一种填写
@@ -75,6 +91,54 @@ public class ZhiShu extends Application {
                         // 是否显示忽略此次版本更新按钮
                         update.setIgnore(true);
                         return update;
+                    }
+                })
+                .checkCB(new UpdateCheckCB() {
+
+                    @Override
+                    public void onCheckError(int code, String errorMsg) {
+                        Toast.makeText(ZhiShu.this, "更新失败：code:" + code + ",errorMsg:" + errorMsg, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUserCancel() {
+                        Toast.makeText(ZhiShu.this, "取消更新", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCheckIgnore(Update update) {
+                        Toast.makeText(ZhiShu.this, "忽略此版本更新", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void hasUpdate(Update update) {
+                        Toast.makeText(ZhiShu.this, "检查到有更新", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void noUpdate() {
+                        Toast.makeText(ZhiShu.this, "暂时没有更新", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                // apk下载的回调
+                .downloadCB(new UpdateDownloadCB() {
+                    @Override
+                    public void onUpdateStart() {
+                        Toast.makeText(ZhiShu.this, "下载开始", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUpdateComplete(File file) {
+                        Toast.makeText(ZhiShu.this, "下载完成", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUpdateProgress(long current, long total) {
+                    }
+
+                    @Override
+                    public void onUpdateError(int code, String errorMsg) {
+                        Toast.makeText(ZhiShu.this, "下载失败：code:" + code + ",errorMsg:" + errorMsg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }
