@@ -19,7 +19,7 @@ import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -38,7 +38,7 @@ public class MainActivity extends AbsBaseActivity {
     AHBottomNavigation mAhBottomNavigation;
     @BindView(R.id.drawer_layout)
     CoordinatorLayout drawerLayout;
-    private List<Fragment> fragments = new ArrayList<>();
+    private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
 
