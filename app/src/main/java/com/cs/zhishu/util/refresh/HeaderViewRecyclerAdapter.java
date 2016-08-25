@@ -46,6 +46,12 @@ public class HeaderViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
     }
 
     @Override
+    public int getItemCount() {
+
+        return getHeaderCount() + getFooterCount() + getWrappedItemCount();
+    }
+
+    @Override
     public int getItemViewType(int position) {
 
         int hCount = getHeaderCount();
@@ -54,7 +60,8 @@ public class HeaderViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
             int itemCount = mWrappedAdapter.getItemCount();
             if (position < hCount + itemCount) {
                 return getAdapterTypeOffset() + mWrappedAdapter.getItemViewType(position - hCount);
-            } else return FOOTERS_START + position - hCount - itemCount;
+            } else
+                return FOOTERS_START + position - hCount - itemCount;
         }
     }
 
@@ -88,12 +95,6 @@ public class HeaderViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
         mFooterViews.add(view);
     }
 
-    @Override
-    public int getItemCount() {
-
-        return getHeaderCount() + getFooterCount() + getWrappedItemCount();
-    }
-
     public int getWrappedItemCount() {
 
         return mWrappedAdapter.getItemCount();
@@ -115,7 +116,9 @@ public class HeaderViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
         if (mWrappedAdapter != null) mWrappedAdapter.unregisterAdapterDataObserver(mDataObserver);
         mWrappedAdapter = adapter;
         Class adapterClass = mWrappedAdapter.getClass();
-        if (!mItemTypesOffset.containsKey(adapterClass)) putAdapterTypeOffset(adapterClass);
+        if (!mItemTypesOffset.containsKey(adapterClass))
+            putAdapterTypeOffset(adapterClass);
+
         mWrappedAdapter.registerAdapterDataObserver(mDataObserver);
     }
 

@@ -73,6 +73,7 @@ public class MoreActivity extends AbsBaseActivity {
 
     @OnClick(R.id.more_btn_setting)
     void startSetting() {
+        startActivity(new Intent(MoreActivity.this, SettingActivity.class));
 
     }
 

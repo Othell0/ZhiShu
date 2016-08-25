@@ -22,9 +22,7 @@ import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
 import com.cs.zhishu.util.NightModeHelper;
 
-import org.lzh.framework.updatepluginlib.UpdateBuilder;
-
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -43,7 +41,7 @@ public class MainActivity extends AbsBaseActivity {
     AHBottomNavigation mAhBottomNavigation;
     @BindView(R.id.drawer_layout)
     CoordinatorLayout drawerLayout;
-    private List<Fragment> fragments = new ArrayList<>();
+    private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
     private static int mNightMode = Configuration.UI_MODE_NIGHT_UNDEFINED;
@@ -56,9 +54,6 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-
-        /*Activity中进行更新检查*/
-        UpdateBuilder.create().check(MainActivity.this);
 
 
         fragments.add(DailyListFragment.newInstance());
