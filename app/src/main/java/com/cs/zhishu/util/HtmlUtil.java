@@ -1,5 +1,7 @@
 package com.cs.zhishu.util;
 
+import android.support.v7.app.AppCompatDelegate;
+
 import com.cs.zhishu.model.DailyDetail;
 
 import java.util.List;
@@ -8,6 +10,8 @@ import java.util.List;
  * Created by Othell0 on 7/28/2016.
  */
 public class HtmlUtil {
+
+
     //css样式,隐藏header
     private static final String HIDE_HEADER_STYLE = "<style>div.headline{display:none;}</style>";
 
@@ -21,10 +25,10 @@ public class HtmlUtil {
 
     public static final String ENCODING = "utf-8";
 
-    private HtmlUtil()
-    {
+    private HtmlUtil() {
 
     }
+
 
     /**
      * 根据css链接生成Link标签
@@ -32,8 +36,7 @@ public class HtmlUtil {
      * @param url String
      * @return String
      */
-    public static String createCssTag(String url)
-    {
+    public static String createCssTag(String url) {
 
         return String.format(NEEDED_FORMAT_CSS_TAG, url);
     }
@@ -44,12 +47,10 @@ public class HtmlUtil {
      * @param urls List<String>
      * @return String
      */
-    public static String createCssTag(List<String> urls)
-    {
+    public static String createCssTag(List<String> urls) {
 
         final StringBuilder sb = new StringBuilder();
-        for (String url : urls)
-        {
+        for (String url : urls) {
             sb.append(createCssTag(url));
         }
         return sb.toString();
@@ -61,8 +62,7 @@ public class HtmlUtil {
      * @param url String
      * @return String
      */
-    public static String createJsTag(String url)
-    {
+    public static String createJsTag(String url) {
 
         return String.format(NEEDED_FORMAT_JS_TAG, url);
     }
@@ -73,12 +73,10 @@ public class HtmlUtil {
      * @param urls List<String>
      * @return String
      */
-    public static String createJsTag(List<String> urls)
-    {
+    public static String createJsTag(List<String> urls) {
 
         final StringBuilder sb = new StringBuilder();
-        for (String url : urls)
-        {
+        for (String url : urls) {
             sb.append(createJsTag(url));
         }
         return sb.toString();
@@ -93,8 +91,7 @@ public class HtmlUtil {
      * @param js   string
      * @return string
      */
-    private static String createHtmlData(String html, String css, String js)
-    {
+    private static String createHtmlData(String html, String css, String js) {
 
         return css.concat(HIDE_HEADER_STYLE).concat(html).concat(js);
     }
@@ -104,8 +101,7 @@ public class HtmlUtil {
      *
      * @return String
      */
-    public static String createHtmlData(DailyDetail detail)
-    {
+    public static String createHtmlData(DailyDetail detail) {
 
         final String css = HtmlUtil.createCssTag(detail.getCss());
         final String js = HtmlUtil.createJsTag(detail.getJs());

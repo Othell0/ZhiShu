@@ -13,15 +13,15 @@ public class DailyListBean implements Parcelable {
 
     private List<DailyBean> stories;
 
-    private List<TopDailys> top_stories;
+    private List<TopDailies> top_stories;
 
-    public List<TopDailys> getTop_stories()
+    public List<TopDailies> getTop_stories()
     {
 
         return top_stories;
     }
 
-    public void setTop_stories(List<TopDailys> top_stories)
+    public void setTop_stories(List<TopDailies> top_stories)
     {
 
         this.top_stories = top_stories;
@@ -77,7 +77,7 @@ public class DailyListBean implements Parcelable {
 
         this.date = in.readString();
         this.stories = in.createTypedArrayList(DailyBean.CREATOR);
-        this.top_stories = in.createTypedArrayList(TopDailys.CREATOR);
+        this.top_stories = in.createTypedArrayList(TopDailies.CREATOR);
     }
 
     public static final Parcelable.Creator<DailyListBean> CREATOR = new Parcelable.Creator<DailyListBean>()

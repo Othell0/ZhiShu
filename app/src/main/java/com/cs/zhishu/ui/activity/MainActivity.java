@@ -3,9 +3,11 @@ package com.cs.zhishu.ui.activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +20,7 @@ import com.cs.zhishu.ui.fragment.DailyListFragment;
 import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
+import com.cs.zhishu.util.NightModeHelper;
 
 import org.lzh.framework.updatepluginlib.UpdateBuilder;
 
@@ -43,6 +46,7 @@ public class MainActivity extends AbsBaseActivity {
     private List<Fragment> fragments = new ArrayList<>();
     private int currentTabIndex;
     private long exitTime = 0;
+    private static int mNightMode = Configuration.UI_MODE_NIGHT_UNDEFINED;
 
 
     @Override
@@ -126,16 +130,20 @@ public class MainActivity extends AbsBaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_mode:
-                //切换日夜间模式
-                mNightModeHelper.toggle();
-                return true;
-
             case R.id.action_settings:
                 //设置
                 startActivity(new Intent(this, MoreActivity.class));
                 return true;
+   /*         case R.id.action_mode:
+                //切换模式
 
+              *//*      getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);*//*
+
+                recreate();
+                return true;*/
             default:
                 break;
         }

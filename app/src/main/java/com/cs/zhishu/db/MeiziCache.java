@@ -3,7 +3,7 @@ package com.cs.zhishu.db;
 import android.content.Context;
 
 
-import com.cs.zhishu.base.ZhiShu;
+import com.cs.zhishu.ZhiShu;
 import com.cs.zhishu.model.DoubanMeizi;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

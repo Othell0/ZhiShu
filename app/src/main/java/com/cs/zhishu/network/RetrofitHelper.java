@@ -1,6 +1,6 @@
 package com.cs.zhishu.network;
 
-import com.cs.zhishu.base.ZhiShu;
+import com.cs.zhishu.ZhiShu;
 import com.cs.zhishu.model.DailyComment;
 import com.cs.zhishu.model.DailyDetail;
 import com.cs.zhishu.model.DailyExtraMessage;

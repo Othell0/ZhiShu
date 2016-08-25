@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by exbbefl on 7/15/2016.
  */
-public class TopDailys implements Parcelable {
+public class TopDailies implements Parcelable {
     private String image;
 
     private int type;
@@ -95,12 +95,12 @@ public class TopDailys implements Parcelable {
         dest.writeString(this.title);
     }
 
-    public TopDailys()
+    public TopDailies()
     {
 
     }
 
-    protected TopDailys(Parcel in)
+    protected TopDailies(Parcel in)
     {
 
         this.image = in.readString();
@@ -110,19 +110,19 @@ public class TopDailys implements Parcelable {
         this.title = in.readString();
     }
 
-    public static final Parcelable.Creator<TopDailys> CREATOR = new Parcelable.Creator<TopDailys>()
+    public static final Parcelable.Creator<TopDailies> CREATOR = new Parcelable.Creator<TopDailies>()
     {
 
-        public TopDailys createFromParcel(Parcel source)
+        public TopDailies createFromParcel(Parcel source)
         {
 
-            return new TopDailys(source);
+            return new TopDailies(source);
         }
 
-        public TopDailys[] newArray(int size)
+        public TopDailies[] newArray(int size)
         {
 
-            return new TopDailys[size];
+            return new TopDailies[size];
         }
     };
 }

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.cs.zhishu.R;
-import com.cs.zhishu.model.TopDailys;
+import com.cs.zhishu.model.TopDailies;
 import com.cs.zhishu.ui.activity.DailyDetailActivity;
 
 import java.util.ArrayList;
@@ -21,10 +21,10 @@ import java.util.List;
  */
 public class MainViewPagerAdapter extends PagerAdapter {
 
-    private List<TopDailys> tops = new ArrayList<>();
+    private List<TopDailies> tops = new ArrayList<>();
     private Context context;
 
-    public MainViewPagerAdapter(Context context, List<TopDailys> tops) {
+    public MainViewPagerAdapter(Context context, List<TopDailies> tops) {
         this.context = context;
         this.tops = tops;
 
@@ -47,12 +47,12 @@ public class MainViewPagerAdapter extends PagerAdapter {
         View view = LayoutInflater.from(context).inflate(R.layout.pager_item, container, false);
         ImageView mImg = (ImageView) view.findViewById(R.id.pager_img);
         TextView mTitle = (TextView) view.findViewById(R.id.pager_title);
-        TopDailys mTopDailys = tops.get(position);
+        TopDailies mTopDailies = tops.get(position);
         Glide.with(context)
-                .load(mTopDailys.getImage())
+                .load(mTopDailies.getImage())
                 .into(mImg);
-        mTitle.setText(mTopDailys.getTitle());
-        final int id = mTopDailys.getId();
+        mTitle.setText(mTopDailies.getTitle());
+        final int id = mTopDailies.getId();
         view.setOnClickListener(new View.OnClickListener() {
 
 

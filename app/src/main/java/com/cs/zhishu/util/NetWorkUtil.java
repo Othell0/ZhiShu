@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.cs.zhishu.base.ZhiShu;
+import com.cs.zhishu.ZhiShu;
 
 /**
  * Created by exbbefl on 7/15/2016.

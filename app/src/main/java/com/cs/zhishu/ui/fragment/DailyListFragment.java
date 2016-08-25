@@ -20,7 +20,7 @@ import com.cs.zhishu.db.DailyDao;
 import com.cs.zhishu.model.DailyBean;
 import com.cs.zhishu.model.DailyDetail;
 import com.cs.zhishu.model.DailyListBean;
-import com.cs.zhishu.model.TopDailys;
+import com.cs.zhishu.model.TopDailies;
 import com.cs.zhishu.network.RetrofitHelper;
 import com.cs.zhishu.util.NetWorkUtil;
 import com.cs.zhishu.util.refresh.HeaderViewRecyclerAdapter;
@@ -217,7 +217,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
                             if (dailyListBean.getStories().size() < 8) {
                                 loadMoreDaily(DailyListFragment.this.currentTime);
                             }
-                            List<TopDailys> tops = dailyListBean.getTop_stories();
+                            List<TopDailies> tops = dailyListBean.getTop_stories();
                             mMainViewPagerAdapter = new MainViewPagerAdapter(getActivity(), tops);
                             mViewPager.setAdapter(mMainViewPagerAdapter);
                             mCircleIndicator.setViewPager(mViewPager);

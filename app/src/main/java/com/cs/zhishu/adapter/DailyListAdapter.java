@@ -82,7 +82,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         if (holder instanceof ItemTimeViewHolder) {
             setDailyDate(holder, dailyBean);
             ItemTimeViewHolder itemTimeViewHolder = (ItemTimeViewHolder) holder;
-            String timeStr = "";
+            String timeStr;
             if (position == 0) {
                 timeStr = "今日热闻";
             } else {
@@ -139,19 +139,19 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     }
 
 
-    public void updateData(List<DailyBean> dailys) {
+    public void updateData(List<DailyBean> dailies) {
 
-        this.dailys = dailys;
+        this.dailys = dailies;
         notifyDataSetChanged();
     }
 
 
-    public void addData(List<DailyBean> dailys) {
+    public void addData(List<DailyBean> dailies) {
 
         if (this.dailys == null) {
-            updateData(dailys);
+            updateData(dailies);
         } else {
-            this.dailys.addAll(dailys);
+            this.dailys.addAll(dailies);
             notifyDataSetChanged();
         }
     }

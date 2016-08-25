@@ -2,6 +2,7 @@ package com.cs.zhishu.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.cs.zhishu.util.NightModeHelper;
 import com.cs.zhishu.util.StatusBarCompat;
@@ -14,7 +15,6 @@ import butterknife.Unbinder;
  */
 public abstract class AbsBaseActivity extends AppCompatActivity {
 
-    public NightModeHelper mNightModeHelper;
     private Unbinder unbinder;
 
     @Override
@@ -31,9 +31,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         initViews(savedInstanceState);
         //初始化ToolBar
         initToolBar();
-        //初始化日夜间模式切换帮助类
-        mNightModeHelper = new NightModeHelper(this);
-
 
     }
 

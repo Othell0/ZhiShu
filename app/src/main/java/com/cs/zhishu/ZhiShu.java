@@ -1,9 +1,10 @@
 
-package com.cs.zhishu.base;
+package com.cs.zhishu;
 
 
 import android.app.Application;
 import android.content.Context;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.alibaba.mobileim.FeedbackAPI;
 import com.alibaba.mobileim.YWAPI;
@@ -30,8 +31,13 @@ public class ZhiShu extends Application {
 
     public final static String APP_KEY = "23425913";
 
+
+
     @Override
     public void onCreate() {
+        AppCompatDelegate.setDefaultNightMode(
+                AppCompatDelegate.MODE_NIGHT_AUTO);
+
         /*实时反馈模块*/
         SysUtil.setApplication(this);
         if (SysUtil.isTCMSServiceProcess(this)) {
