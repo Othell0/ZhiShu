@@ -4,12 +4,12 @@ xmlns:tools="http://schemas.android.com/tools"
 tools:context=".ui.activity.MainActivity">
 <item
     android:id="@+id/action_settings"
-    android:orderInCategory="100"
+    android:orderInCategory="1"
     android:title="@string/action_settings"
     app:showAsAction="never" />
-<item
+<!--<item
     android:id="@+id/action_mode"
     android:orderInCategory="100"
     android:title="@string/action_mode"
-    app:showAsAction="never" />
+    app:showAsAction="never" />-->
 </menu>

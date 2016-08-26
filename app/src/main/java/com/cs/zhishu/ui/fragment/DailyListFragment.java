@@ -98,7 +98,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
 
     public static DailyListFragment newInstance() {
-
         return new DailyListFragment();
     }
 
@@ -119,7 +118,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
             }
         });
 
-
         mAdapter = new DailyListAdapter(getActivity(), dailies);
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setHasFixedSize(true);
@@ -128,15 +126,12 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
             @Override
             public void onLoadMore(int currentPage) {
-
                 loadMoreDaily(currentTime);
             }
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-
                 super.onScrolled(recyclerView, dx, dy);
-
                 mSwipeRefreshLayout.setEnabled(mLinearLayoutManager.findFirstCompletelyVisibleItemPosition() == 0);
             }
         };
@@ -169,7 +164,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
 
     public void getLatestDailies(final boolean isDownRefresh) {
-
         RetrofitHelper.builder().getLatestNews()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -196,14 +190,12 @@ public class DailyListFragment extends LazyFragment implements Runnable {
                     @Override
                     public void onCompleted() {
                         Log.e("onCompleted", " 刷新加载成功");
-
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         hideProgress();
                         Log.e(e.getMessage(), "onError: 加载失败");
-
                     }
 
                     @Override
@@ -228,18 +220,15 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
                     }
                 });
-
     }
 
     private void showProgress() {
-
         mCircleProgressView.setVisibility(View.VISIBLE);
         mCircleProgressView.startAnimation();
         mRecyclerView.setVisibility(View.GONE);
     }
 
     public void hideProgress() {
-
         mCircleProgressView.setVisibility(View.GONE);
         mCircleProgressView.stopAnimation();
         mRecyclerView.setVisibility(View.VISIBLE);
@@ -271,7 +260,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
                     public void onCompleted() {
                         Log.e("loadMoreDaily", "onCompleted: 加载更多数据成功");
 
-
                     }
 
                     @Override
@@ -299,7 +287,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
      * @return
      */
     public DailyListBean changeReadState(DailyListBean dailyList) {
-
         List<String> allReadId = new DailyDao(getActivity()).getAllReadNew();
         for (DailyBean daily : dailyList.getStories()) {
             daily.setDate(dailyList.getDate());
@@ -318,7 +305,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
      * @param dailies
      */
     private void cacheAllDetail(List<DailyBean> dailies) {
-
         if (NetWorkUtil.isWifiConnected()) {
             for (DailyBean daily : dailies) {
                 cacheNewsDetail(daily.getId());
@@ -327,7 +313,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
     }
 
     private void cacheNewsDetail(int newsId) {
-
         RetrofitHelper.builder().getNewsDetails(newsId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -349,7 +334,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
     @Override
     public void run() {
-
         if (mPagerPosition == size - 1) {
             mViewPager.setCurrentItem(size - 1, false);
         } else {
@@ -359,7 +343,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
 
     private class BannerTask extends TimerTask {
-
         @Override
         public void run() {
 
@@ -374,7 +357,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
     @Override
     public void onDestroy() {
-
         super.onDestroy();
         if (mTimer != null) {
             mTimer.cancel();

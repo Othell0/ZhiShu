@@ -65,7 +65,6 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-
         trClientAdapter = new TRClientAdapter(this);
         trcList.setAdapter(trClientAdapter);
         initData();
@@ -85,7 +84,6 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
 
 
     public void initData() {
-
         service = TRService.createTRService();
         trClientAdapter.addData(new ChatBean(TRClientAdapter.TYPE_ROBOT, TRC_ROBOT_REC));
 
@@ -102,7 +100,6 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
     @OnClick(R.id.trc_btn_send)
     public void onClick(View v) {
         if (v.getId() == R.id.trc_btn_send){
-
             String str = trcEdit.getText().toString();
             if (TextUtils.isEmpty(str)) {
                 return;
@@ -137,8 +134,6 @@ public class TRClientActivity extends AbsBaseActivity implements View.OnClickLis
             }
         });
     }
-
-
 
     private void addData(ChatBean chatBean) {
         trClientAdapter.addData(chatBean);

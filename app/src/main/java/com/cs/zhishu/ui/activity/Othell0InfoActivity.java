@@ -37,7 +37,6 @@ public class Othell0InfoActivity extends AbsBaseActivity {
         animateImage();
         animateText();
         animateText1();
-
     }
 
     private void animateImage() {
@@ -74,7 +73,6 @@ public class Othell0InfoActivity extends AbsBaseActivity {
             }
         });
         valueAnimator.start();
-
     }
 
     private void animateText1() {
@@ -85,7 +83,6 @@ public class Othell0InfoActivity extends AbsBaseActivity {
         set.play(translationXAnimator).with(alphaAnimator);
         set.setDuration(6000);
         set.start();
-
     }
 
     @Override
@@ -95,8 +92,6 @@ public class Othell0InfoActivity extends AbsBaseActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
-
-
     }
 
     @Override

@@ -96,9 +96,9 @@ public class DailyCommentActivity extends AbsBaseActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
         }
@@ -106,7 +106,6 @@ public class DailyCommentActivity extends AbsBaseActivity {
     }
 
     public static void launcher(Activity activity, int id, int num, int longCommentNum, int shortCommentNum) {
-
         Intent mIntent = new Intent(activity, DailyCommentActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mIntent.putExtra(EXTRA_ID, id);
@@ -117,8 +116,6 @@ public class DailyCommentActivity extends AbsBaseActivity {
     }
 
     public class CommentPagerAdapter extends FragmentStatePagerAdapter {
-
-
         public CommentPagerAdapter(FragmentManager fm) {
 
             super(fm);
@@ -126,19 +123,16 @@ public class DailyCommentActivity extends AbsBaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-
             return fragmentList.get(position);
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-
             return titles.get(position);
         }
 
         @Override
         public int getCount() {
-
             return titles.size();
         }
     }

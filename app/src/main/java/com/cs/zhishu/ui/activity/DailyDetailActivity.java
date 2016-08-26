@@ -116,7 +116,6 @@ public class DailyDetailActivity extends AbsBaseActivity {
         //第一次进入提示用户可以左滑返回
  /*       showSnackBarHint();*/
 
-
     }
 
     @Override

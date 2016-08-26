@@ -47,7 +47,6 @@ public class EditorInfoActivity extends AbsBaseActivity {
 
     @Override
     public int getLayoutId() {
-
         return R.layout.activity_editor_info;
     }
 
@@ -77,7 +76,6 @@ public class EditorInfoActivity extends AbsBaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
         }
@@ -124,7 +122,7 @@ public class EditorInfoActivity extends AbsBaseActivity {
 
     }
 
-    public static void luancher(Activity activity, int id, String name) {
+    public static void launcher(Activity activity, int id, String name) {
         Intent mIntent = new Intent(activity, EditorInfoActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mIntent.putExtra(EXTRA_ID, id);
@@ -137,13 +135,11 @@ public class EditorInfoActivity extends AbsBaseActivity {
 
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-
             super.onPageStarted(view, url, favicon);
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
-
             super.onPageFinished(view, url);
             hideProgress();
             mWebView.getSettings().setBlockNetworkImage(false);
@@ -151,7 +147,6 @@ public class EditorInfoActivity extends AbsBaseActivity {
 
         @Override
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-
             super.onReceivedError(view, errorCode, description, failingUrl);
             String errorHtml = "<html><body><h2>找不到网页</h2></body><ml>";
             view.loadDataWithBaseURL(null, errorHtml, "textml", "UTF-8", null);
@@ -162,12 +157,10 @@ public class EditorInfoActivity extends AbsBaseActivity {
     private void showProgress() {
         mCircleProgressView.setVisibility(View.VISIBLE);
         mCircleProgressView.startAnimation();
-
     }
 
     private void hideProgress() {
         mCircleProgressView.setVisibility(View.GONE);
         mCircleProgressView.stopAnimation();
-
     }
 }

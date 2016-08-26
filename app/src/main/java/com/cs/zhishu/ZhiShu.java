@@ -1,15 +1,15 @@
 
-package com.cs.zhishu.base;
+package com.cs.zhishu;
 
 
 import android.app.Application;
 import android.content.Context;
+import android.support.v7.app.AppCompatDelegate;
 import android.widget.Toast;
 
 import com.alibaba.mobileim.FeedbackAPI;
 import com.alibaba.mobileim.YWAPI;
 import com.alibaba.wxlib.util.SysUtil;
-import com.cs.zhishu.R;
 import com.github.lazylibrary.util.AppUtils;
 
 import org.lzh.framework.updatepluginlib.UpdateConfig;
@@ -37,10 +37,12 @@ public class ZhiShu extends Application {
 
     @Override
     public void onCreate() {
-
-        super.onCreate();
+        /*设置自动夜间模式*/
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
         initFeedBack();
         initUpdate();
+        super.onCreate();
+
 
     }
 

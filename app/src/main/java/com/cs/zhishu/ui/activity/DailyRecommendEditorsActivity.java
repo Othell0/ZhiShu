@@ -34,7 +34,6 @@ import rx.schedulers.Schedulers;
 public class DailyRecommendEditorsActivity extends AbsBaseActivity {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-
     @BindView(R.id.recycle)
     RecyclerView mRecyclerView;
     @BindView(R.id.empty_tv)
@@ -149,7 +148,7 @@ public class DailyRecommendEditorsActivity extends AbsBaseActivity {
                 DailyRecommend.Editor editor = editorList.get(i);
                 int id = editor.id;
                 String name = editor.name;
-                EditorInfoActivity.luancher(DailyRecommendEditorsActivity.this, id, name);
+                EditorInfoActivity.launcher(DailyRecommendEditorsActivity.this, id, name);
             }
         });
     }

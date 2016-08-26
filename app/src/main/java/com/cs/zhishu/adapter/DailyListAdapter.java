@@ -40,9 +40,9 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     private Context mContext;
 
 
-    public DailyListAdapter(Context context, List<DailyBean> dailys) {
+    public DailyListAdapter(Context context, List<DailyBean> dailies) {
 
-        this.dailys = dailys;
+        this.dailys = dailies;
         this.mContext = context;
         this.mDailyDao = new DailyDao(context);
     }
@@ -65,9 +65,15 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     public ItemContentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         if (viewType == ITEM_TIME) {
-            return new ItemTimeViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_daily_list_time, parent, false));
+
+            return new ItemTimeViewHolder(LayoutInflater
+                    .from(parent.getContext())
+                    .inflate(R.layout.item_daily_list_time, parent, false));
         } else {
-            return new ItemContentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_daily_list, parent, false));
+
+            return new ItemContentViewHolder(LayoutInflater
+                    .from(parent.getContext())
+                    .inflate(R.layout.item_daily_list, parent, false));
         }
     }
 

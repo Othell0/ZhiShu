@@ -33,7 +33,6 @@ public class SectionsFragment extends LazyFragment {
     private List<DailySections.DailySectionsInfo> sectionsInfos = new ArrayList<>();
 
     public static SectionsFragment newInstance() {
-
         SectionsFragment mSectionsFragment = new SectionsFragment();
         return mSectionsFragment;
     }
@@ -57,8 +56,6 @@ public class SectionsFragment extends LazyFragment {
             }
         });
         getSections();
-
-
     }
 
     private void getSections() {
@@ -71,8 +68,6 @@ public class SectionsFragment extends LazyFragment {
                     public void onCompleted() {
                         Log.e("SectionsFragment", "onCompleted");
                     }
-
-
 
                     @Override
                     public void onError(Throwable e) {
@@ -87,7 +82,6 @@ public class SectionsFragment extends LazyFragment {
                         sectionsInfos.addAll(data);
                         afterGetSections();
                         mSwipeRefreshLayout.setRefreshing(false);
-
                     }
                 });
 

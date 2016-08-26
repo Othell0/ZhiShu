@@ -3,11 +3,9 @@ package com.cs.zhishu.ui.activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +18,6 @@ import com.cs.zhishu.ui.fragment.DailyListFragment;
 import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
-import com.cs.zhishu.util.NightModeHelper;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -44,7 +41,6 @@ public class MainActivity extends AbsBaseActivity {
     private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
-    private static int mNightMode = Configuration.UI_MODE_NIGHT_UNDEFINED;
 
 
     @Override
@@ -54,7 +50,6 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-
 
         fragments.add(DailyListFragment.newInstance());
         fragments.add(ThemesDailyFragment.newInstance());
@@ -110,7 +105,6 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initToolBar() {
-
         mToolbar.setTitle("知书");
         setSupportActionBar(mToolbar);
     }
@@ -147,7 +141,6 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-
         return super.onPrepareOptionsMenu(menu);
     }
 

@@ -30,7 +30,6 @@ public class MoreActivity extends AbsBaseActivity {
     @Override
     public void initViews(Bundle savedInstanceState) {
 
-
     }
 
 
@@ -47,7 +46,6 @@ public class MoreActivity extends AbsBaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
         }
@@ -56,14 +54,12 @@ public class MoreActivity extends AbsBaseActivity {
 
     @OnClick(R.id.more_btn_info)
     void startOthell0Info() {
-
         startActivity(new Intent(MoreActivity.this, Othell0InfoActivity.class));
     }
 
 
     @OnClick(R.id.more_btn_feed_back)
     void startFeedBack() {
-
         Intent intent = FeedbackAPI.getFeedbackActivityIntent();
         if (intent != null) {
             startActivity(intent);

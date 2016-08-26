@@ -3,7 +3,6 @@ package com.cs.zhishu.ui.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
@@ -66,7 +64,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-
         Intent intent = getIntent();
         if (intent != null) {
             id = intent.getIntExtra(EXTRA_ID, -1);
@@ -84,12 +81,10 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
                 getSectionsDetails();
             }
         });
-
         getSectionsDetails();
     }
 
     private void getSectionsDetails() {
-
         RetrofitHelper.getLastZhiHuApi().getSectionsDetails(id)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -120,7 +115,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
     }
 
     private void finishGetSectionsDetails() {
-
         mAdapter = new SectionsDetailsAdapter(mRecyclerView, sectionsDetailsInfos);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.addOnScrollListener(new AutoLoadOnScrollListener(mLinearLayoutManager) {
@@ -136,7 +130,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
 
             @Override
             public void onItemClick(int position, AbsRecyclerViewAdapter.ClickableViewHolder holder) {
-
                 SectionsDetails.SectionsDetailsInfo sectionsDetailsInfo = sectionsDetailsInfos.get(position);
                 int id = sectionsDetailsInfo.id;
                 DailyDetailActivity.launch(SectionsDetailsActivity.this, id);
@@ -145,7 +138,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
     }
 
     public void loadMore(long timestamp) {
-
         RetrofitHelper.getLastZhiHuApi().getBeforeSectionsDetails(id, timestamp)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -153,7 +145,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
 
                     @Override
                     public void call(SectionsDetails sectionsDetails) {
-
                         if (sectionsDetails != null) {
                             List<SectionsDetails.SectionsDetailsInfo> stories = sectionsDetails.stories;
                             if (stories != null && stories.size() > 0) {
@@ -185,7 +176,6 @@ public class SectionsDetailsActivity extends AbsBaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
         }

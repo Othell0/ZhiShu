@@ -60,7 +60,6 @@ public class SplashActivity extends Activity {
     }
 
     private void getLaunchImage() {
-
         RetrofitHelper.builder().getLaunchImage(RESOLUTION)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -123,7 +122,6 @@ public class SplashActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
         mHandler.removeCallbacksAndMessages(null);
     }

@@ -2,9 +2,7 @@ package com.cs.zhishu.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
 
-import com.cs.zhishu.util.NightModeHelper;
 import com.cs.zhishu.util.StatusBarCompat;
 
 import butterknife.ButterKnife;
@@ -31,7 +29,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         initViews(savedInstanceState);
         //初始化ToolBar
         initToolBar();
-
     }
 
     @Override

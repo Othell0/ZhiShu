@@ -38,7 +38,6 @@ public class StatusBarCompat {
                 color = statusColor;
             }
             View statusBarView = contentView.getChildAt(0);
-            // �ı���ɫʱ�����ظ����statusBarView
             if (statusBarView != null && statusBarView.getMeasuredHeight() == getStatusBarHeight(activity))
             {
                 statusBarView.setBackgroundColor(color);

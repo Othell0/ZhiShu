@@ -32,7 +32,6 @@ public class LongCommentFragment extends LazyFragment {
     EmptyView mEmptyView;
 
     private int id;
-
     private List<DailyComment.CommentInfo> longCommentinfos = new ArrayList<>();
 
     public static LongCommentFragment newInstance(int id) {
@@ -53,13 +52,10 @@ public class LongCommentFragment extends LazyFragment {
     public void initViews() {
         Bundle bundle = getArguments();
         id = bundle.getInt(EXTRA_ID);
-
         getLongComment();
-
     }
 
     private void getLongComment() {
-
         RetrofitHelper.builder().getDailyLongCommentById(id)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -67,14 +63,12 @@ public class LongCommentFragment extends LazyFragment {
                     @Override
                     public void onCompleted() {
                         Log.e("getLongComment", "onCompleted: ");
-
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         Log.e("getLongComment", "onError: ");
                         mEmptyView.setVisibility(View.VISIBLE);
-
                     }
 
                     @Override
@@ -86,8 +80,6 @@ public class LongCommentFragment extends LazyFragment {
                         } else {
                             mEmptyView.setVisibility(View.VISIBLE);
                         }
-
-
                     }
                 });
     }

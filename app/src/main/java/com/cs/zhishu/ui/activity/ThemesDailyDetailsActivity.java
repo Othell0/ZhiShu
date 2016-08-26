@@ -3,7 +3,6 @@ package com.cs.zhishu.ui.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.cs.zhishu.R;
 import com.cs.zhishu.adapter.AbsRecyclerViewAdapter;
 import com.cs.zhishu.adapter.ThemesDetailsHeadAdapter;
@@ -34,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -75,9 +72,7 @@ public class ThemesDailyDetailsActivity extends AbsBaseActivity {
             id = intent.getIntExtra(EXTRA_TYPE, -1);
         }
 
-
         startGetThemesDetails();
-
     }
 
     private void startGetThemesDetails() {
@@ -183,7 +178,7 @@ public class ThemesDailyDetailsActivity extends AbsBaseActivity {
                 Editors editor = ThemesDailyDetailsActivity.this.editors.get(position);
                 int id = editor.getId();
                 String name = editor.getName();
-                EditorInfoActivity.luancher(ThemesDailyDetailsActivity.this, id, name);
+                EditorInfoActivity.launcher(ThemesDailyDetailsActivity.this, id, name);
             }
         });
         mHeaderViewRecyclerAdapter.addHeaderView(headView);
@@ -209,7 +204,6 @@ public class ThemesDailyDetailsActivity extends AbsBaseActivity {
     }
 
     public static void launch(Activity activity, int id) {
-
         Intent mIntent = new Intent(activity, ThemesDailyDetailsActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mIntent.putExtra(EXTRA_TYPE, id);

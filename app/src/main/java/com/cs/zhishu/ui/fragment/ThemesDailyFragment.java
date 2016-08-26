@@ -66,23 +66,17 @@ public class ThemesDailyFragment extends LazyFragment {
                     @Override
                     public void onCompleted() {
                         Log.e("ThemesDailyFragment", "onCompleted");
-
-
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
                         Log.e("ThemesDailyFragment", "onError");
-
-
                     }
 
                     @Override
                     public void onNext(DailyTypeBean dailyTypeBean) {
                         List<DailyTypeBean.SubjectDaily> others = dailyTypeBean.getOthers();
                         afterGetDailyType(others);
-
                     }
                 });
 
@@ -111,10 +105,7 @@ public class ThemesDailyFragment extends LazyFragment {
         mCircleProgressView.setVisibility(View.GONE);
         mCircleProgressView.stopAnimation();
         mRecyclerView.setVisibility(View.VISIBLE);
-
-
     }
-
 
 
 }

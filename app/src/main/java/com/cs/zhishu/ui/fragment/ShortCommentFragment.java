@@ -74,21 +74,18 @@ public class ShortCommentFragment extends LazyFragment {
                     @Override
                     public void onNext(DailyComment dailyComment) {
                         List<DailyComment.CommentInfo> comments = dailyComment.comments;
-                        if (comments != null && comments.size() > 0)
-                        {
+                        if (comments != null && comments.size() > 0) {
                             shortCommentInfos.addAll(comments);
                             finishGetShortComment();
                         }
-
                     }
                 });
     }
 
     private void finishGetShortComment() {
-
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        CommentAdapter mAdapter = new CommentAdapter( shortCommentInfos);
+        CommentAdapter mAdapter = new CommentAdapter(shortCommentInfos);
         mRecyclerView.setAdapter(mAdapter);
 
     }
