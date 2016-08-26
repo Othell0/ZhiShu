@@ -252,12 +252,12 @@
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_bg.xml"
     },
     {
-        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_checked.xml",
-        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_checked.xml"
-    },
-    {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button.xml",
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button.xml"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_checked.xml",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_checked.xml"
     },
     {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\feedback_bg.xml",
