@@ -27,6 +27,7 @@ public class SectionsAdapter extends BaseQuickAdapter<DailySections.DailySection
         Glide.with(mContext)
                 .load(dailySectionsInfo.thumbnail)
                 .placeholder(R.drawable.account_avatar)
+                .crossFade(3000)
                 .into((ImageView) baseViewHolder.getView(R.id.item_img));
         baseViewHolder.setText(R.id.item_des,dailySectionsInfo.description);
         baseViewHolder.setText(R.id.item_name,dailySectionsInfo.name);

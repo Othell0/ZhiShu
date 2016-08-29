@@ -45,7 +45,11 @@ public class SectionsDetailsAdapter extends AbsRecyclerViewAdapter
         {
             ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
             SectionsDetails.SectionsDetailsInfo sectionsDetailsInfo = sectionsDetailsInfos.get(position);
-            Glide.with(getContext()).load(sectionsDetailsInfo.images.get(0)).placeholder(R.drawable.account_avatar).into(itemViewHolder.mImageView);
+            Glide.with(getContext())
+                    .load(sectionsDetailsInfo.images.get(0))
+                    .placeholder(R.drawable.account_avatar)
+                    .crossFade(3000)
+                    .into(itemViewHolder.mImageView);
             itemViewHolder.mTitle.setText(sectionsDetailsInfo.title);
             itemViewHolder.mTime.setText(sectionsDetailsInfo.displayDate);
         }

@@ -113,7 +113,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
             @Override
             public void onRefresh() {
-
                 mHandler.sendEmptyMessageDelayed(0, 1000);
             }
         });
@@ -160,7 +159,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
         mHeaderViewRecyclerAdapter.addHeaderView(headView);
         getLatestDailies(false);
     }
-
 
 
     public void getLatestDailies(final boolean isDownRefresh) {
@@ -320,7 +318,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
                     @Override
                     public void call(DailyDetail dailyDetail) {
-
                     }
                 });
     }
@@ -345,7 +342,6 @@ public class DailyListFragment extends LazyFragment implements Runnable {
     private class BannerTask extends TimerTask {
         @Override
         public void run() {
-
             if (!mIsUserTouched) {
                 mPagerPosition = (mPagerPosition + 1) % size;
                 if (getActivity() != null) {

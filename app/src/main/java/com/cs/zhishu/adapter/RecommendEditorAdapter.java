@@ -24,6 +24,7 @@ public class RecommendEditorAdapter extends BaseQuickAdapter<DailyRecommend.Edit
         Glide.with(mContext)
                 .load(editor.avatar)
                 .placeholder(R.drawable.account_avatar)
+                .crossFade(3000)
                 .into((ImageView) baseViewHolder.getView(R.id.user_pic));
 
         baseViewHolder.setText(R.id.user_name, editor.name);

@@ -45,7 +45,11 @@ public class ThemesDetailsHeadAdapter extends AbsRecyclerViewAdapter
         if (holder instanceof ItemViewHolder)
         {
             ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-            Glide.with(getContext()).load(editors.get(position).getAvatar()).into(itemViewHolder.mPic);
+            Glide.with(getContext())
+                    .load(editors.get(position).getAvatar())
+                    .placeholder(R.drawable.account_avatar)
+                    .crossFade(3000)
+                    .into(itemViewHolder.mPic);
         }
 
         super.onBindViewHolder(holder, position);

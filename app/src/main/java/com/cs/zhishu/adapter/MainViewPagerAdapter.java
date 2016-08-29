@@ -27,7 +27,6 @@ public class MainViewPagerAdapter extends PagerAdapter {
     public MainViewPagerAdapter(Context context, List<TopDailies> tops) {
         this.context = context;
         this.tops = tops;
-
     }
 
     @Override
@@ -40,32 +39,27 @@ public class MainViewPagerAdapter extends PagerAdapter {
         return view == object;
     }
 
-
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
-        View view = LayoutInflater.from(context).inflate(R.layout.pager_item, container, false);
-        ImageView mImg = (ImageView) view.findViewById(R.id.pager_img);
-        TextView mTitle = (TextView) view.findViewById(R.id.pager_title);
+        View mView = LayoutInflater.from(context).inflate(R.layout.pager_item, container, false);
+        ImageView mImg = (ImageView) mView.findViewById(R.id.pager_img);
+        TextView mTitle = (TextView) mView.findViewById(R.id.pager_title);
         TopDailies mTopDailies = tops.get(position);
         Glide.with(context)
                 .load(mTopDailies.getImage())
+                .placeholder(R.drawable.account_avatar)
                 .into(mImg);
         mTitle.setText(mTopDailies.getTitle());
         final int id = mTopDailies.getId();
-        view.setOnClickListener(new View.OnClickListener() {
-
-
+        mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 DailyDetailActivity.launch(context, id);
             }
         });
-        container.addView(view);
-        return view;
+        container.addView(mView);
+        return mView;
     }
-
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);

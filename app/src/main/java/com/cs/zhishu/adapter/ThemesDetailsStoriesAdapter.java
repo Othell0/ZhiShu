@@ -49,7 +49,11 @@ public class ThemesDetailsStoriesAdapter extends AbsRecyclerViewAdapter
             mItemViewHolder.mTitle.setText(stories.get(position).getTitle());
             if(stories.get(position).getImages() != null)
             {
-                Glide.with(getContext()).load(stories.get(position).getImages().get(0)).placeholder(R.drawable.account_avatar).into(mItemViewHolder.mImg);
+                Glide.with(getContext())
+                        .load(stories.get(position).getImages().get(0))
+                        .placeholder(R.drawable.account_avatar)
+                        .crossFade(3000)
+                        .into(mItemViewHolder.mImg);
             }
             else
             {

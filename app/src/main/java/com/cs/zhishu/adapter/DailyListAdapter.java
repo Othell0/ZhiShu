@@ -33,7 +33,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
     private static final int ITEM_TIME = 1;
 
-    private List<DailyBean> dailys = new ArrayList<>();
+    private List<DailyBean> dailies = new ArrayList<>();
 
     private DailyDao mDailyDao;
 
@@ -42,7 +42,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
     public DailyListAdapter(Context context, List<DailyBean> dailies) {
 
-        this.dailys = dailies;
+        this.dailies = dailies;
         this.mContext = context;
         this.mDailyDao = new DailyDao(context);
     }
@@ -53,9 +53,9 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         if (position == 0) {
             return ITEM_TIME;
         }
-        String time = dailys.get(position).getDate();
+        String time = dailies.get(position).getDate();
         int index = position - 1;
-        boolean isDifferent = !dailys.get(index).getDate().equals(time);
+        boolean isDifferent = !dailies.get(index).getDate().equals(time);
         int pos = isDifferent ? ITEM_TIME : ITEM_CONTENT;
 
         return pos;
@@ -80,7 +80,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     @Override
     public void onBindViewHolder(ItemContentViewHolder holder, int position) {
 
-        DailyBean dailyBean = dailys.get(position);
+        DailyBean dailyBean = dailies.get(position);
         if (dailyBean == null) {
             return;
         }
@@ -106,7 +106,11 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         holder.mTitle.setText(dailyBean.getTitle());
         List<String> images = dailyBean.getImages();
         if (images != null && images.size() > 0) {
-            Glide.with(mContext).load(images.get(0)).placeholder(R.drawable.account_avatar).into(holder.mPic);
+            Glide.with(mContext)
+                    .load(images.get(0))
+                    .placeholder(R.drawable.account_avatar)
+                    .crossFade(3000)
+                    .into(holder.mPic);
         }
         boolean multipic = dailyBean.isMultipic();
         if (multipic) {
@@ -147,17 +151,17 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
     public void updateData(List<DailyBean> dailies) {
 
-        this.dailys = dailies;
+        this.dailies = dailies;
         notifyDataSetChanged();
     }
 
 
     public void addData(List<DailyBean> dailies) {
 
-        if (this.dailys == null) {
+        if (this.dailies == null) {
             updateData(dailies);
         } else {
-            this.dailys.addAll(dailies);
+            this.dailies.addAll(dailies);
             notifyDataSetChanged();
         }
     }
@@ -165,12 +169,12 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
     @Override
     public int getItemCount() {
 
-        return dailys.size() == 0 ? 0 : dailys.size();
+        return dailies.size() == 0 ? 0 : dailies.size();
     }
 
     public List<DailyBean> getmDailyList() {
 
-        return dailys;
+        return dailies;
     }
 
 
@@ -204,7 +208,6 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
 
         public ItemContentViewHolder(View itemView) {
-
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

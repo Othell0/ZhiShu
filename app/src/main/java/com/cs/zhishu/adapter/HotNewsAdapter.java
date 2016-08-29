@@ -25,7 +25,11 @@ public class HotNewsAdapter extends BaseQuickAdapter<HotNews.HotNewsInfo> {
     @Override
     protected void convert(BaseViewHolder baseViewHolder, HotNews.HotNewsInfo item) {
         baseViewHolder.setText(R.id.item_des, item.title);
-        Glide.with(mContext).load(item.thumbnail).crossFade().placeholder(R.drawable.account_avatar).into((ImageView) baseViewHolder.getView(R.id.item_img));
+        Glide.with(mContext)
+                .load(item.thumbnail)
+                .placeholder(R.drawable.account_avatar)
+                .crossFade(3000)
+                .into((ImageView) baseViewHolder.getView(R.id.item_img));
 
     }
 

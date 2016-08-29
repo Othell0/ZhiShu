@@ -87,14 +87,13 @@ public class SplashActivity extends Activity {
 
                             Glide.with(SplashActivity.this)
                                     .load(img)
+                                    .crossFade(2000)
                                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                                     .into(ivSplash);
 
                             tvFrom.setText(launchImageBean.getText());
                             mHandler.sendEmptyMessageDelayed(0, 1000);
                         }
-
-
                     }
                 });
     }
@@ -112,7 +111,6 @@ public class SplashActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 SplashActivity.this.finish();
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
