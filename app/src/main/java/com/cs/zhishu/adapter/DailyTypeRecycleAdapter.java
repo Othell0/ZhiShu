@@ -25,7 +25,7 @@ public class DailyTypeRecycleAdapter extends BaseQuickAdapter<DailyTypeBean.Subj
         Glide.with(mContext)
                 .load(item.getThumbnail())
                 .placeholder(R.drawable.account_avatar)
-                .crossFade(3000)
+                .crossFade(1000)
                 .into((ImageView) baseViewHolder.getView(R.id.item_type_img));
 
         baseViewHolder.setText(R.id.item_type_des, item.getDescription());

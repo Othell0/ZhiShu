@@ -10,8 +10,8 @@ android {
         applicationId "com.cs.zhishu"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 33851
-        versionName "3.2"
+        versionCode 33855
+        versionName "3.3"
         /*解决64K问题*/
         multiDexEnabled true
     }

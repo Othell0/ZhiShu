@@ -48,7 +48,7 @@ public class ThemesDetailsHeadAdapter extends AbsRecyclerViewAdapter
             Glide.with(getContext())
                     .load(editors.get(position).getAvatar())
                     .placeholder(R.drawable.account_avatar)
-                    .crossFade(3000)
+                    .crossFade(1000)
                     .into(itemViewHolder.mPic);
         }
 

@@ -24,7 +24,7 @@ public class CommentAdapter extends BaseQuickAdapter<DailyComment.CommentInfo> {
         Glide.with(mContext)
                 .load(commentInfo.avatar)
                 .placeholder(R.drawable.account_avatar)
-                .crossFade(3000)
+                .crossFade(1000)
                 .into((ImageView) baseViewHolder.getView(R.id.user_pic));
 
         baseViewHolder.setText(R.id.user_name, commentInfo.author);

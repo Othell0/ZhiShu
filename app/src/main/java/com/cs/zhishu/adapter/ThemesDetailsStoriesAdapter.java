@@ -52,7 +52,7 @@ public class ThemesDetailsStoriesAdapter extends AbsRecyclerViewAdapter
                 Glide.with(getContext())
                         .load(stories.get(position).getImages().get(0))
                         .placeholder(R.drawable.account_avatar)
-                        .crossFade(3000)
+                        .crossFade(1000)
                         .into(mItemViewHolder.mImg);
             }
             else

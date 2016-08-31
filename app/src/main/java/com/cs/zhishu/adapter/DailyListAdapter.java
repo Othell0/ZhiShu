@@ -49,28 +49,22 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
     @Override
     public int getItemViewType(int position) {
-
         if (position == 0) {
             return ITEM_TIME;
         }
         String time = dailies.get(position).getDate();
         int index = position - 1;
         boolean isDifferent = !dailies.get(index).getDate().equals(time);
-        int pos = isDifferent ? ITEM_TIME : ITEM_CONTENT;
-
-        return pos;
+        return isDifferent ? ITEM_TIME : ITEM_CONTENT;
     }
 
     @Override
     public ItemContentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         if (viewType == ITEM_TIME) {
-
             return new ItemTimeViewHolder(LayoutInflater
                     .from(parent.getContext())
                     .inflate(R.layout.item_daily_list_time, parent, false));
         } else {
-
             return new ItemContentViewHolder(LayoutInflater
                     .from(parent.getContext())
                     .inflate(R.layout.item_daily_list, parent, false));
@@ -79,12 +73,10 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
     @Override
     public void onBindViewHolder(ItemContentViewHolder holder, int position) {
-
         DailyBean dailyBean = dailies.get(position);
         if (dailyBean == null) {
             return;
         }
-
         if (holder instanceof ItemTimeViewHolder) {
             setDailyDate(holder, dailyBean);
             ItemTimeViewHolder itemTimeViewHolder = (ItemTimeViewHolder) holder;
@@ -102,14 +94,13 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
 
     private void setDailyDate(final ItemContentViewHolder holder, final DailyBean dailyBean) {
-
         holder.mTitle.setText(dailyBean.getTitle());
         List<String> images = dailyBean.getImages();
         if (images != null && images.size() > 0) {
             Glide.with(mContext)
                     .load(images.get(0))
                     .placeholder(R.drawable.account_avatar)
-                    .crossFade(3000)
+                    .crossFade(1000)
                     .into(holder.mPic);
         }
         boolean multipic = dailyBean.isMultipic();
@@ -179,12 +170,10 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
 
     public class ItemTimeViewHolder extends ItemContentViewHolder {
-
         @BindView(R.id.item_time)
         TextView mTime;
 
         public ItemTimeViewHolder(View itemView) {
-
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
@@ -192,8 +181,6 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
 
 
     public class ItemContentViewHolder extends RecyclerView.ViewHolder {
-
-
         @BindView(R.id.card_view)
         CardView mLayout;
 

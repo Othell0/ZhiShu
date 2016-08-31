@@ -28,7 +28,7 @@ public class HotNewsAdapter extends BaseQuickAdapter<HotNews.HotNewsInfo> {
         Glide.with(mContext)
                 .load(item.thumbnail)
                 .placeholder(R.drawable.account_avatar)
-                .crossFade(3000)
+                .crossFade(1000)
                 .into((ImageView) baseViewHolder.getView(R.id.item_img));
 
     }

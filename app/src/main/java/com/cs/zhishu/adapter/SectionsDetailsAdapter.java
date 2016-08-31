@@ -48,7 +48,7 @@ public class SectionsDetailsAdapter extends AbsRecyclerViewAdapter
             Glide.with(getContext())
                     .load(sectionsDetailsInfo.images.get(0))
                     .placeholder(R.drawable.account_avatar)
-                    .crossFade(3000)
+                    .crossFade(1000)
                     .into(itemViewHolder.mImageView);
             itemViewHolder.mTitle.setText(sectionsDetailsInfo.title);
             itemViewHolder.mTime.setText(sectionsDetailsInfo.displayDate);
