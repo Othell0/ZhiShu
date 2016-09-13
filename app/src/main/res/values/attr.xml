@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <attr name="clockBackground" format="color" />
+    <attr name="clockTextColor" format="color" />
     <!-- 侧滑返回Layout-->
     <declare-styleable name="SwipeBackLayout">
         <attr name="edge_size" format="dimension"/>

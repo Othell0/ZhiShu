@@ -16,6 +16,7 @@ import com.cs.zhishu.db.DailyDao;
 import com.cs.zhishu.model.DailyBean;
 import com.cs.zhishu.ui.activity.DailyDetailActivity;
 import com.cs.zhishu.util.DateUtil;
+import com.cs.zhishu.util.DayNightHelper;
 import com.cs.zhishu.util.WeekUtil;
 
 import java.util.ArrayList;
@@ -110,25 +111,40 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         } else {
             holder.mMorePic.setVisibility(View.GONE);
         }
+
         if (!dailyBean.isRead()) {
-            holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_unread));
+            DayNightHelper mDayNightHelper = new DayNightHelper(mContext);
+            if (mDayNightHelper.isDay()) {
+                holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_unread));
+            } else {
+                holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_unread1));
+            }
         } else {
-            holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read));
+            DayNightHelper mDayNightHelper = new DayNightHelper(mContext);
+            if (mDayNightHelper.isDay()) {
+                holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read));
+            } else {
+                holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read1));
+            }
         }
+
         holder.mLayout.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+                DayNightHelper mDayNightHelper = new DayNightHelper(mContext);
 
                 if (!dailyBean.isRead()) {
                     dailyBean.setRead(true);
-                    holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read));
-                    new Thread(new Runnable() {
 
+                    if (mDayNightHelper.isDay()) {
+                        holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read));
+                    } else {
+                        holder.mTitle.setTextColor(ContextCompat.getColor(mContext, R.color.color_read1));
+                    }
+                    new Thread(new Runnable() {
                         @Override
                         public void run() {
-
                             mDailyDao.insertReadNew(dailyBean.getId() + "");
                         }
                     }).start();

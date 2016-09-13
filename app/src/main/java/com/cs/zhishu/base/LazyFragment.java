@@ -40,4 +40,5 @@ public abstract class LazyFragment extends Fragment {
     public abstract int getLayoutId();
 
     public abstract void initViews();
+
 }

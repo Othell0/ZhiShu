@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/clockBackground"
     android:orientation="vertical">
 
     <TextView
@@ -14,7 +15,8 @@
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
         android:textSize="18sp"
-        android:textColor="@color/font_normal"
+        android:textColor="?attr/clockTextColor"
+        android:background="?attr/clockBackground"
         tools:text="4月3号 星期日"/>
 
     <include layout="@layout/item_daily_list"/>

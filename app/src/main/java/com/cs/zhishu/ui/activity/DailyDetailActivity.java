@@ -146,11 +146,6 @@ public class DailyDetailActivity extends AbsBaseActivity {
                 share();
                 return true;
 
-            case R.id.menu_action_fav:
-                //查看新闻推荐者
-                DailyRecommendEditorsActivity.launcher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId());
-                return true;
-
             case R.id.menu_action_comment:
                 // 查看新闻评论
                 DailyCommentActivity.launcher(DailyDetailActivity.this, mDaily == null ? id : mDaily.getId(), mDailyExtraMessage.comments, mDailyExtraMessage.longComments, mDailyExtraMessage.shortComments);

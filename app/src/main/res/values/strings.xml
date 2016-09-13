@@ -25,5 +25,8 @@
     <string name="author">---来俊臣《罗织经》</string>
     <string name="info_name">Othell0</string>
     <string name="update_note">update_note</string>
+    <string name="navigation_weather" >天气</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 
 </resources>

@@ -33,8 +33,7 @@ public class SectionsFragment extends LazyFragment {
     private List<DailySections.DailySectionsInfo> sectionsInfos = new ArrayList<>();
 
     public static SectionsFragment newInstance() {
-        SectionsFragment mSectionsFragment = new SectionsFragment();
-        return mSectionsFragment;
+        return new SectionsFragment();
     }
 
     @Override
@@ -45,12 +44,10 @@ public class SectionsFragment extends LazyFragment {
     @Override
     public void initViews() {
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
-        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener()
-        {
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
 
             @Override
-            public void onRefresh()
-            {
+            public void onRefresh() {
 
                 getSections();
             }
@@ -86,7 +83,7 @@ public class SectionsFragment extends LazyFragment {
                 });
 
 
-}
+    }
 
     private void afterGetSections() {
         mRecyclerView.setHasFixedSize(true);

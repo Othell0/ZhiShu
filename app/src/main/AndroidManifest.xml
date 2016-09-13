@@ -67,9 +67,6 @@
             android:theme="@style/AppTheme.TransparentStatusBar" />
 
         <!-- 日报推荐者查看界面 -->
-        <activity
-            android:name=".ui.activity.DailyRecommendEditorsActivity"
-            android:screenOrientation="portrait" />
         <activity android:name=".ui.activity.SettingActivity"></activity>
     </application>
 

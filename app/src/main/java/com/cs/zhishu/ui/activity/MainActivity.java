@@ -1,14 +1,26 @@
 package com.cs.zhishu.ui.activity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
@@ -18,11 +30,14 @@ import com.cs.zhishu.ui.fragment.DailyListFragment;
 import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
+import com.cs.zhishu.util.DayNight;
+import com.cs.zhishu.util.DayNightHelper;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -30,17 +45,19 @@ import static java.lang.System.currentTimeMillis;
 /*知书主界面*/
 
 public class MainActivity extends AbsBaseActivity {
-
-
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.bottom_navigation)
     AHBottomNavigation mAhBottomNavigation;
     @BindView(R.id.drawer_layout)
-    CoordinatorLayout drawerLayout;
+    DrawerLayout drawerLayout;
+    @BindView(R.id.navigation_view)
+    NavigationView navigationView;
     private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
+    private ActionBarDrawerToggle mDrawerToggle;
+    /*private MainPresenter mMainPresenter;*/
 
 
     @Override
@@ -50,6 +67,7 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+        initDrawerlayout();
 
         fragments.add(DailyListFragment.newInstance());
         fragments.add(ThemesDailyFragment.newInstance());
@@ -58,6 +76,27 @@ public class MainActivity extends AbsBaseActivity {
 
         showFragment(fragments.get(0));
         initBottomNav();
+    }
+
+    private void initDrawerlayout() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.drawer_open,
+                R.string.drawer_close);
+        mDrawerToggle.syncState();
+        drawerLayout.setDrawerListener(mDrawerToggle);
+        setupDrawerContent(navigationView);
+    }
+
+    private void setupDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                    /*    mMainPresenter.switchNavigation(menuItem.getItemId());*/
+                        menuItem.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        return true;
+                    }
+                });
     }
 
     private void showFragment(Fragment fragment) {
@@ -90,12 +129,12 @@ public class MainActivity extends AbsBaseActivity {
             public void onTabSelected(int position, boolean wasSelected) {
 
                 if (currentTabIndex != position) {
-                    FragmentTransaction trx = getFragmentManager().beginTransaction();
-                    trx.hide(fragments.get(currentTabIndex));
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.hide(fragments.get(currentTabIndex));
                     if (!fragments.get(position).isAdded()) {
-                        trx.add(R.id.content, fragments.get(position));
+                        ft.add(R.id.content, fragments.get(position));
                     }
-                    trx.show(fragments.get(position)).commit();
+                    ft.show(fragments.get(position)).commit();
                 }
                 currentTabIndex = position;
             }
@@ -123,20 +162,85 @@ public class MainActivity extends AbsBaseActivity {
                 //设置
                 startActivity(new Intent(this, MoreActivity.class));
                 return true;
-   /*         case R.id.action_mode:
-                //切换模式
 
-              *//*      getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-
-                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);*//*
-
-                recreate();
+//            切换日夜间模式
+/*            case R.id.action_mode:
+                showAnimation();
+                toggleThemeSetting();
+                refreshUI();
                 return true;*/
             default:
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void refreshUI() {
+        TypedValue background = new TypedValue();//背景色
+        TypedValue textColor = new TypedValue();//字体颜色
+        Resources.Theme theme = getTheme();
+        theme.resolveAttribute(R.attr.clockBackground, background, true);
+        theme.resolveAttribute(R.attr.clockTextColor, textColor, true);
+
+
+        refreshStatusBar();
+    }
+
+    private void refreshStatusBar() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            TypedValue typedValue = new TypedValue();
+            Resources.Theme theme = getTheme();
+            theme.resolveAttribute(R.attr.colorPrimary, typedValue, true);
+            getWindow().setStatusBarColor(getResources().getColor(typedValue.resourceId));
+        }
+    }
+
+    private void toggleThemeSetting() {
+        DayNightHelper mDayNightHelper = new DayNightHelper(this);
+        if (mDayNightHelper.isDay()) {
+            mDayNightHelper.setMode(DayNight.NIGHT);
+            setTheme(R.style.NightTheme);
+        } else {
+            mDayNightHelper.setMode(DayNight.DAY);
+            setTheme(R.style.DayTheme);
+        }
+    }
+
+    private Bitmap getCacheBitmapFromView(View view) {
+        final boolean drawingCacheEnabled = true;
+        view.setDrawingCacheEnabled(drawingCacheEnabled);
+        view.buildDrawingCache(drawingCacheEnabled);
+        final Bitmap drawingCache = view.getDrawingCache();
+        Bitmap bitmap;
+        if (drawingCache != null) {
+            bitmap = Bitmap.createBitmap(drawingCache);
+            view.setDrawingCacheEnabled(false);
+        } else {
+            bitmap = null;
+        }
+        return bitmap;
+    }
+
+    private void showAnimation() {
+        final View decorView = getWindow().getDecorView();
+        Bitmap cacheBitmap = getCacheBitmapFromView(decorView);
+        if (decorView instanceof ViewGroup && cacheBitmap != null) {
+            final View view = new View(this);
+            view.setBackgroundDrawable(new BitmapDrawable(getResources(), cacheBitmap));
+            ViewGroup.LayoutParams layoutParam = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
+            ((ViewGroup) decorView).addView(view, layoutParam);
+            ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f);
+            objectAnimator.setDuration(300);
+            objectAnimator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    ((ViewGroup) decorView).removeView(view);
+                }
+            });
+            objectAnimator.start();
+        }
     }
 
     @Override
@@ -156,6 +260,12 @@ public class MainActivity extends AbsBaseActivity {
     }
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }
 
 
