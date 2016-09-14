@@ -8,32 +8,32 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_head_default.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png"
-    },
-    {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",
@@ -44,16 +44,160 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_room_head_default.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_room_head_default.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png"
     },
     {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png"
+    },
+    {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_title_loading_normal.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_title_loading_normal.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo.9.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_head_default.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_head_default.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_btn_add.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_btn_add.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_normal.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_normal.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_head_default.png",
@@ -68,20 +212,12 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png"
-    },
-    {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_input_status_image.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_input_status_image.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png"
-    },
-    {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png",
@@ -92,28 +228,36 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_head_default.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_head_default.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_room_head_default.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_room_head_default.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
-    },
-    {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_input_status_image.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_input_status_image.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_btn_add.png",
@@ -128,19 +272,19 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_title_loading_normal.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
-    },
-    {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo.9.png",
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo.9.png"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png"
     }
 ]

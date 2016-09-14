@@ -28,5 +28,8 @@
     <string name="navigation_weather" >天气</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="navigation_news">发现好视界</string>
+    <string name="find_news">视界</string>
+    <string name="navigation_intro">知书•发现新视界</string>
 
 </resources>

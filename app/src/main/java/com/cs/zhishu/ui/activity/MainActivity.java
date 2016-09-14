@@ -30,6 +30,7 @@ import com.cs.zhishu.ui.fragment.DailyListFragment;
 import com.cs.zhishu.ui.fragment.HotNewsFragment;
 import com.cs.zhishu.ui.fragment.SectionsFragment;
 import com.cs.zhishu.ui.fragment.ThemesDailyFragment;
+import com.cs.zhishu.ui.fragment.WeatherFragment;
 import com.cs.zhishu.util.DayNight;
 import com.cs.zhishu.util.DayNightHelper;
 
@@ -37,7 +38,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -52,12 +52,11 @@ public class MainActivity extends AbsBaseActivity {
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
     @BindView(R.id.navigation_view)
-    NavigationView navigationView;
+    NavigationView mNavigationView;
     private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
     private ActionBarDrawerToggle mDrawerToggle;
-    /*private MainPresenter mMainPresenter;*/
 
 
     @Override
@@ -67,7 +66,7 @@ public class MainActivity extends AbsBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-        initDrawerlayout();
+        initDrawerLayout();
 
         fragments.add(DailyListFragment.newInstance());
         fragments.add(ThemesDailyFragment.newInstance());
@@ -78,12 +77,12 @@ public class MainActivity extends AbsBaseActivity {
         initBottomNav();
     }
 
-    private void initDrawerlayout() {
+    private void initDrawerLayout() {
         mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.drawer_open,
                 R.string.drawer_close);
         mDrawerToggle.syncState();
-        drawerLayout.setDrawerListener(mDrawerToggle);
-        setupDrawerContent(navigationView);
+        drawerLayout.addDrawerListener(mDrawerToggle);
+        setupDrawerContent(mNavigationView);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -91,7 +90,19 @@ public class MainActivity extends AbsBaseActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                    /*    mMainPresenter.switchNavigation(menuItem.getItemId());*/
+                        switch (menuItem.getItemId()) {
+                            case R.id.navigation_item_weather:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.content, new WeatherFragment()).commit();
+                                mToolbar.setTitle(R.string.navigation_weather);
+                                break;
+
+                            case R.id.navigation_item_news:
+                                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                mToolbar.setTitle(R.string.find_news);
+                                break;
+                        }
+
                         menuItem.setChecked(true);
                         drawerLayout.closeDrawers();
                         return true;
@@ -146,6 +157,8 @@ public class MainActivity extends AbsBaseActivity {
     public void initToolBar() {
         mToolbar.setTitle("知书");
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);  //设置返回键可用
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -174,6 +187,7 @@ public class MainActivity extends AbsBaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     private void refreshUI() {
         TypedValue background = new TypedValue();//背景色
@@ -243,10 +257,6 @@ public class MainActivity extends AbsBaseActivity {
         }
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        return super.onPrepareOptionsMenu(menu);
-    }
 
     @Override
     public void onBackPressed() {
@@ -260,12 +270,6 @@ public class MainActivity extends AbsBaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
 
 
