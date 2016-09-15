@@ -27,7 +27,7 @@ public class EmptyView extends LinearLayout {
 
     private void init() {
 
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_empty_comment, null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_empty_comment, this);
         addView(view);
     }
 }

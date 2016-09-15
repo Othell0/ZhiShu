@@ -31,5 +31,26 @@
     <string name="navigation_news">发现好视界</string>
     <string name="find_news">视界</string>
     <string name="navigation_intro">知书•发现新视界</string>
+    <string name="feedback_hint">哪里还需要改进，请告诉我 - -</string>
+    <string name="_160">160</string>
+    <string name="feedback_commit">提交</string>
+    <string name="more_activity_name">Othell0</string>
+    <string name="check_homepage">查看我的个人主页</string>
+    <string name="moreactivity_feedback">意见反馈</string>
+    <string name="moreactivity_setting">通用设置</string>
+    <string name="moreactivity_turing">知你所问</string>
+    <string name="moreactivity_aboutApp">关于知书</string>
+    <string name="check_update">检查更新</string>
+    <string name="turing_send">发送</string>
+    <string name="autoupdate_dialog_cancel">取消</string>
+    <string name="turing_me">我</string>
+    <string name="turing_robot">小知</string>
+    <string name="empty_comment">还没有评论哦!</string>
+    <string name="theme_detail_mainEditor">主编</string>
+    <string name="bottombar_menu1">日报</string>
+    <string name="bottombar_menu2">主题</string>
+    <string name="bottombar_menu3">专栏</string>
+    <string name="bottombar_menu4">文章</string>
+    <string name="turing_hint">您有什么要问的？</string>
 
 </resources>

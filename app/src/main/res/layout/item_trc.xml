@@ -14,7 +14,7 @@
         android:layout_toStartOf="@+id/item_trc_linear"
         android:background="@drawable/chat_bg_normal"
         android:textSize="16sp"
-        android:text="真的吗"/>
+      />
 
 
 
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:text="我"/>
+            android:text="@string/turing_me"/>
     </LinearLayout>
 
 

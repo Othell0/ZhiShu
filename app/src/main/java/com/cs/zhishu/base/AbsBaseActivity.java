@@ -15,8 +15,6 @@ import butterknife.Unbinder;
  */
 public abstract class AbsBaseActivity extends AppCompatActivity {
 
-    private Unbinder unbinder;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -46,7 +44,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbinder = ButterKnife.bind(this);
+        Unbinder unbinder = ButterKnife.bind(this);
         unbinder.unbind();
 
     }

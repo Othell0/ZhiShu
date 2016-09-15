@@ -203,7 +203,7 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         @BindView(R.id.item_image)
         ImageView mPic;
 
-        @BindView(R.id.item_title)
+        @BindView(R.id.item_title1)
         TextView mTitle;
 
         @BindView(R.id.item_more_pic)

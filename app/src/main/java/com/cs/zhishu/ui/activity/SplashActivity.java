@@ -39,15 +39,20 @@ public class SplashActivity extends Activity {
     TextView tvFrom;
 
 
-    private Handler mHandler = new Handler() {
-
+    private final ThreadLocal<Handler> mHandler = new ThreadLocal<Handler>() {
         @Override
-        public void handleMessage(Message msg) {
+        protected Handler initialValue() {
+            return new Handler() {
 
-            super.handleMessage(msg);
-            if (msg.what == 0) {
-                animateImage();
-            }
+                @Override
+                public void handleMessage(Message msg) {
+
+                    super.handleMessage(msg);
+                    if (msg.what == 0) {
+                        animateImage();
+                    }
+                }
+            };
         }
     };
 
@@ -76,7 +81,7 @@ public class SplashActivity extends Activity {
                     public void onError(Throwable e) {
                         Log.e("请求失败", "onError");
                         Glide.with(SplashActivity.this).load(R.drawable.default_splash).into(ivSplash);
-                        mHandler.sendEmptyMessageDelayed(0, 1000);
+                        mHandler.get().sendEmptyMessageDelayed(0, 1000);
 
                     }
 
@@ -92,7 +97,7 @@ public class SplashActivity extends Activity {
                                     .into(ivSplash);
 
                             tvFrom.setText(launchImageBean.getText());
-                            mHandler.sendEmptyMessageDelayed(0, 1000);
+                            mHandler.get().sendEmptyMessageDelayed(0,1);
                         }
                     }
                 });
@@ -121,7 +126,7 @@ public class SplashActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mHandler.removeCallbacksAndMessages(null);
+        mHandler.get().removeCallbacksAndMessages(null);
     }
 
 }

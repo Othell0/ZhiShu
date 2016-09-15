@@ -20,16 +20,16 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_gallery_item.xml"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_member_item.xml",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_member_item.xml"
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_send_at_msg_detail.xml",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_send_at_msg_detail.xml"
     },
     {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_send_item.xml",
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_send_item.xml"
     },
     {
-        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_send_at_msg_detail.xml",
-        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_send_at_msg_detail.xml"
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_member_item.xml",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_member_item.xml"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_send_item.xml",
@@ -124,12 +124,12 @@
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_contacts_header_layout.xml"
     },
     {
-        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_search_text.xml",
-        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_search_text.xml"
-    },
-    {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_receive_item.xml",
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_receive_item.xml"
+    },
+    {
+        "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_search_text.xml",
+        "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_search_text.xml"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_image_player.xml",
@@ -236,12 +236,12 @@
         "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_reply_bar_select.xml"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_phrase_list.xml",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_phrase_list.xml"
-    },
-    {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_feedback.xml",
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_feedback.xml"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_phrase_list.xml",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_phrase_list.xml"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_smily.xml",

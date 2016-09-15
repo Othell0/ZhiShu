@@ -52,19 +52,24 @@ public class DailyListFragment extends LazyFragment implements Runnable {
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout mSwipeRefreshLayout;
 
-    private Handler mHandler = new Handler() {
-
+    private final ThreadLocal<Handler> mHandler = new ThreadLocal<Handler>() {
         @Override
-        public void handleMessage(Message msg) {
+        protected Handler initialValue() {
+            return new Handler() {
 
-            super.handleMessage(msg);
-            if (msg.what == 0) {
-                getLatestDailies(true);
-            } else if (msg.what == 1) {
-                hideProgress();
-                mSwipeRefreshLayout.setRefreshing(false);
-                finishGetDaily();
-            }
+                @Override
+                public void handleMessage(Message msg) {
+
+                    super.handleMessage(msg);
+                    if (msg.what == 0) {
+                        getLatestDailies(true);
+                    } else if (msg.what == 1) {
+                        hideProgress();
+                        mSwipeRefreshLayout.setRefreshing(false);
+                        finishGetDaily();
+                    }
+                }
+            };
         }
     };
 
@@ -113,7 +118,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
 
             @Override
             public void onRefresh() {
-                mHandler.sendEmptyMessageDelayed(0, 1000);
+                mHandler.get().sendEmptyMessageDelayed(0, 1000);
             }
         });
 
@@ -213,7 +218,7 @@ public class DailyListFragment extends LazyFragment implements Runnable {
                             mViewPager.setAdapter(mMainViewPagerAdapter);
                             mCircleIndicator.setViewPager(mViewPager);
                             size = tops.size();
-                            mHandler.sendEmptyMessageDelayed(1, 2000);
+                            mHandler.get().sendEmptyMessageDelayed(1, 2000);
                         }
 
                     }

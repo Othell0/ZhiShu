@@ -3,7 +3,6 @@
     style="?android:attr/progressBarStyleLarge"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#60000000"
      >
      
     <LinearLayout 
@@ -71,6 +70,7 @@
         <!-- Ok & Cancel  Buttom -->
         
         <LinearLayout
+            android:baselineAligned="false"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -98,7 +98,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="取消"
+                        android:text="@string/autoupdate_dialog_cancel"
                         android:textAppearance="?android:attr/textAppearanceMediumInverse"
                         android:textColor="#494c53"
                         android:paddingTop="5dp"

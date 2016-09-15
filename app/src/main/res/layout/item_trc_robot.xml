@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:text="小知"/>
+            android:text="@string/turing_robot"/>
     </LinearLayout>
 
 

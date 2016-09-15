@@ -28,12 +28,12 @@
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
     },
     {
-        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
-        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png"
-    },
-    {
         "merged": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png",
         "source": "F:\\AS_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png"
+    },
+    {
+        "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
+        "source": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png"
     },
     {
         "merged": "F:\\Android_Project\\ZhiShu\\wx\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",

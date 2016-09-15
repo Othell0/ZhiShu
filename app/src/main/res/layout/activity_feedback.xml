@@ -46,14 +46,14 @@
             android:paddingRight="7dp"
             android:textColor="#555555"
             android:textSize="18sp"
-            android:hint="哪里还需要改进，请告诉我 - -"/>
+            android:hint="@string/feedback_hint"/>
         <TextView
             android:id="@+id/tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:paddingEnd="7dp"
-            android:text="160"
+            android:text="@string/_160"
             android:textColor="#888888"
             android:textSize="16sp"/>
 
@@ -73,7 +73,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/corner_btn"
         android:gravity="center"
-        android:text="提交"
+        android:text="@string/feedback_commit"
         android:textColor="@android:color/white"
         android:textSize="16sp"/>
 

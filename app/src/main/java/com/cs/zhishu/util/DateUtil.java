@@ -1,6 +1,7 @@
 package com.cs.zhishu.util;
 
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 /**
  * Created by Othell0 on 7/22/2016.
@@ -21,10 +22,9 @@ public class DateUtil {
     }
 
     public static String getTime(long date) {
-        SimpleDateFormat format = new SimpleDateFormat("MM-dd HH:mm:ss");
-        Long time = new Long(date);
-        String d = format.format(time);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd HH:mm:ss", Locale.CHINA);
+        Long time = date;
 
-        return d;
+        return simpleDateFormat.format(time);
     }
 }

@@ -4,18 +4,18 @@
     <item
         android:id="@+id/bb_menu_daily"
         android:icon="@drawable/ic_profile_answer"
-        android:title="日报" />
+        android:title="@string/bottombar_menu1" />
     <item
         android:id="@+id/bb_menu_theme"
         android:icon="@drawable/ic_profile_article"
-        android:title="主题" />
+        android:title="@string/bottombar_menu2" />
     <item
         android:id="@+id/bb_menu_expert"
         android:icon="@drawable/ic_profile_column"
-        android:title="专栏" />
+        android:title="@string/bottombar_menu3" />
     <item
         android:id="@+id/bb_menu_article"
         android:icon="@drawable/ic_profile_favorite"
-        android:title="文章" />
+        android:title="@string/bottombar_menu4" />
 
 </menu>

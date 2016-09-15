@@ -50,6 +50,8 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:inputType="text"
+                    android:hint="@string/turing_hint"
                     android:id="@+id/trc_edit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -74,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:text="发送" />
+                android:text="@string/turing_send" />
 
         </RelativeLayout>
     </RelativeLayout>
