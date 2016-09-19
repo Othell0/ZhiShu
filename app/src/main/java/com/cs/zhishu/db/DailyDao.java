@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -29,7 +29,7 @@ public class DailyDao {
 
     public List<String> getAllReadNew() {
 
-        List<String> list = new ArrayList<>();
+        List<String> list = new LinkedList<>();
         SQLiteDatabase db = helper.getReadableDatabase();
         String sqlQuery = "select * from " + DBConstant.TABLE_READ;
         Cursor cursor = db.rawQuery(sqlQuery, null);
@@ -42,7 +42,6 @@ public class DailyDao {
             cursor.close();
         }
         return list;
-
     }
 
 }

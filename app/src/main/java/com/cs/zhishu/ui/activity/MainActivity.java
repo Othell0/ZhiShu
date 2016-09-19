@@ -56,7 +56,6 @@ public class MainActivity extends AbsBaseActivity {
     private List<Fragment> fragments = new LinkedList<>();
     private int currentTabIndex;
     private long exitTime = 0;
-    private ActionBarDrawerToggle mDrawerToggle;
 
 
     @Override
@@ -78,10 +77,10 @@ public class MainActivity extends AbsBaseActivity {
     }
 
     private void initDrawerLayout() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.drawer_open,
-                R.string.drawer_close);
+        /*ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle
+                (this, drawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
         mDrawerToggle.syncState();
-        drawerLayout.addDrawerListener(mDrawerToggle);
+        drawerLayout.addDrawerListener(mDrawerToggle);*/
         setupDrawerContent(mNavigationView);
     }
 
@@ -157,8 +156,8 @@ public class MainActivity extends AbsBaseActivity {
     public void initToolBar() {
         mToolbar.setTitle("知书");
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);  //设置返回键可用
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+     /*   getSupportActionBar().setHomeButtonEnabled(true);  //设置返回键可用
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
 
 
