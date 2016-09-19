@@ -12,5 +12,8 @@ ButterKnife
 ##Thanks
 API from [ZhihuDailyPurify](https://github.com/izzyleung/ZhihuDailyPurify)
 ##Download  
-[Download APK] (http://fir.im/Othell0)
+[安卓市场] (http://apk.hiapk.com/appinfo/com.cs.zhishu)   
+[百度手机助手] (http://shouji.baidu.com/software/9974617.html)   
+[91 安卓下载 ] (http://apk.91.com/Soft/Android/com.cs.zhishu-33905.html)
+
 
