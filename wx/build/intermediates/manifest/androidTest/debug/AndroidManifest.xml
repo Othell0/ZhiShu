@@ -39,15 +39,13 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Aliwx_ChattingDetailStyle_default"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
- <!-- 最近会话列表 -->
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 最近会话列表 -->
         <activity
             android:name="com.alibaba.mobileim.ui.WxConversationActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/Aliwx_ConverationStyle_default" />
- <!-- 多图查看窗口 -->
+            android:theme="@style/Aliwx_ConverationStyle_default" /> <!-- 多图查看窗口 -->
         <activity
             android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity"
             android:hardwareAccelerated="false"
@@ -66,41 +64,34 @@
             android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:theme="@style/Aliwx_ConverationStyle_default" />
- <!-- 反馈窗口 -->
+            android:theme="@style/Aliwx_ConverationStyle_default" /> <!-- 反馈窗口 -->
         <activity
             android:name="com.alibaba.mobileim.ui.FeedbackActvity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Aliwx_Theme.Translucent"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
- <!-- 故障诊断 -->
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 故障诊断 -->
         <service
             android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService"
             android:exported="false" >
-        </service>
- <!-- 数据通道 -->
+        </service> <!-- 数据通道 -->
         <service
             android:name="com.alibaba.tcms.service.TCMSService"
             android:exported="true"
             android:process=":TcmsService" >
-        </service>
- <!-- 用于接收从TCMSService发送的命令 -->
+        </service> <!-- 用于接收从TCMSService发送的命令 -->
         <service
             android:name="com.alibaba.tcms.service.ListenerService"
             android:exported="true" >
-        </service>
- <!-- 漫游密码输入，三方用户不需要这个Activity -->
+        </service> <!-- 漫游密码输入，三方用户不需要这个Activity -->
         <activity
             android:name="com.alibaba.mobileim.kit.CloudPwdSettingHintActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/Aliwx_ConverationStyle_default" />
- <!-- 交易组件跳转窗口，即点击旺旺水滴跳OpenIM窗口 -->
-        <activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity" />
- <!-- @消息相关 -->
+            android:theme="@style/Aliwx_ConverationStyle_default" /> <!-- 交易组件跳转窗口，即点击旺旺水滴跳OpenIM窗口 -->
+        <activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity" /> <!-- @消息相关 -->
         <activity
             android:name="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity"
             android:configChanges="keyboardHidden|orientation"

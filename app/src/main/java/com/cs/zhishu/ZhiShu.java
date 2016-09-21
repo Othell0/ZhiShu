@@ -40,7 +40,7 @@ public class ZhiShu extends Application {
         /*设置自动夜间模式*/
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
         initFeedBack();
-        initUpdate();
+        /*initUpdate();*/
         super.onCreate();
 
 

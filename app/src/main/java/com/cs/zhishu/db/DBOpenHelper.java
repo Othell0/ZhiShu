@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by exbbefl on 7/15/2016.
  */
-public class DBOpenHelper extends SQLiteOpenHelper {
+class DBOpenHelper extends SQLiteOpenHelper {
     private static DBOpenHelper instance;
 
     private DBOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -15,7 +15,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
-    public static DBOpenHelper getInstance(Context context) {
+    static DBOpenHelper getInstance(Context context) {
 
         if (instance == null) {
             synchronized (DBOpenHelper.class) {
