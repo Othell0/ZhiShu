@@ -106,7 +106,6 @@ public class DailyListAdapter extends RecyclerView.Adapter<DailyListAdapter.Item
         }
         boolean multipic = dailyBean.isMultipic();
         if (multipic) {
-
             holder.mMorePic.setVisibility(View.VISIBLE);
         } else {
             holder.mMorePic.setVisibility(View.GONE);

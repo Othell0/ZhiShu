@@ -40,7 +40,7 @@ public class ZhiShu extends Application {
         /*设置自动夜间模式*/
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
         initFeedBack();
-        /*initUpdate();*/
+     /*   initUpdate();*/
         super.onCreate();
 
 
@@ -61,7 +61,7 @@ public class ZhiShu extends Application {
 
     }
 
-    private void initUpdate() {
+    /* private void initUpdate()*/ {
         /*自动更新模块*/
         UpdateConfig.getConfig()
                 // 必填：数据更新接口,url与checkEntity两种方式任选一种填写
